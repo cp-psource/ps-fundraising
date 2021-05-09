@@ -530,7 +530,7 @@ if (!class_exists('Psource_HelpTooltips')) require_once WDF_PLUGIN_BASE_DIR . '/
 					} ?>
 
 				</div>
-				<p class="submit"><input type="submit" value="Save Changes" class="button-primary" name="save_settings" /></p>
+				<p class="submit"><input type="submit" value="Änderungen speichern" class="button-primary" name="save_settings" /></p>
 			</form>
 	<script type="text/javascript">
 		jQuery(document).ready( function($) {

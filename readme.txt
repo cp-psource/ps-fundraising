@@ -3,7 +3,7 @@ Contributors: DerN3rd, WMS N@W
 Tags: fundraising, spenden, crowdfunding
 Requires at least: 3.0
 Tested up to: 5.6.1
-Stable tag: 1.2.1
+Stable tag: 2.6.9
 License: GPLv2 or later
 
 Fundraising ist unsere Weiterentwicklung des von WPMUDEV eingestellten Fundraising-Plugins.
@@ -11,7 +11,7 @@ Erstelle Spendenbuttons, komplexe Crowdfundingkampagnen oder lasse Deine Besuche
 
 == Changelog ==
 
-= 2.6.8 =
+= 2.6.9 =
 
 Behoben: Depecated jQuery ".click()"
 Behoben: Depacated "create_function"

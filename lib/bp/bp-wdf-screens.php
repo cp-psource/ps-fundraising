@@ -270,7 +270,7 @@ function bp_wdf_screen_settings_menu() {
 
 		<?php if ( $bp_settings_updated ) { ?>
 			<div id="message" class="updated fade">
-				<p><?php _e( 'Changes Saved.', 'wdf' ) ?></p>
+				<p><?php _e( 'Änderungen gespeichert.', 'wdf' ) ?></p>
 			</div>
 		<?php } ?>
 
@@ -278,7 +278,7 @@ function bp_wdf_screen_settings_menu() {
 
 			<input type="checkbox" name="bp-wdf-option-one" id="bp-wdf-option-one" value="1"<?php if ( '1' == get_user_meta( $bp->loggedin_user->id, 'bp-wdf-option-one', true ) ) : ?> checked="checked"<?php endif; ?> /> <?php _e( 'Do you love clicking checkboxes?', 'wdf' ); ?>
 			<p class="submit">
-				<input type="submit" value="<?php _e( 'Save Settings', 'wdf' ) ?> &raquo;" id="submit" name="submit" />
+				<input type="submit" value="<?php _e( 'Einstellungen speichern', 'wdf' ) ?> &raquo;" id="submit" name="submit" />
 			</p>
 
 			<?php

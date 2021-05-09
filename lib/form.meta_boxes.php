@@ -419,7 +419,7 @@ if($pagenow == 'nav-menus.php') { ?>
                     <tr>
                         <th class="wdf_goal_start_date"><?php _e('Anfangsdatum','wdf') ?></th>
                         <th class="wdf_goal_end_date"><?php _e('Enddatum','wdf') ?></th>
-                        <th class="wdf_goal_amount" align="right"><?php _e('Goal Amount','wdf') ?></th>
+                        <th class="wdf_goal_amount" align="right"><?php _e('Zielbetrag','wdf') ?></th>
                     </tr>
                     </thead>
                     <tbody>
