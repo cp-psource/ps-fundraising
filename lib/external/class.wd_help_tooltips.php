@@ -201,7 +201,7 @@ class Psource_HelpTooltips {
 	 */
 	private function _print_styles () {
 		// Have we already done this?
-		if (!defined('WPMUDEV_TOOLTIPS_CSS_ADDED')) define('WPMUDEV_TOOLTIPS_CSS_ADDED', true);
+		if (!defined('PSOURCE_TOOLTIPS_CSS_ADDED')) define('PSOURCE_TOOLTIPS_CSS_ADDED', true);
 		else return false;
 
 		?>
@@ -279,7 +279,7 @@ class Psource_HelpTooltips {
 	 */
 	private function _print_scripts () {
 		// Have we already done this?
-		if (!defined('WPMUDEV_TOOLTIPS_JS_ADDED')) define('WPMUDEV_TOOLTIPS_JS_ADDED', true);
+		if (!defined('PSOURCE_TOOLTIPS_JS_ADDED')) define('PSOURCE_TOOLTIPS_JS_ADDED', true);
 		else return false;
 
 		// Initialize bound selectors
@@ -294,7 +294,7 @@ class Psource_HelpTooltips {
  */
 function initialize_help_item ($me) {
 	var $prev = $me.prev();
-	var help = '&nbsp;<a class="psource-help-trigger" href="#help"><span><?php _e('Help');?></span></a>';
+	var help = '&nbsp;<a class="psource-help-trigger" href="#help"><span><?php _e('Hilfe');?></span></a>';
 	$prev = $prev.length ?
 		$prev.after(help)
 		:
