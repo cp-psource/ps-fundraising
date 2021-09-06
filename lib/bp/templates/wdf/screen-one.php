@@ -24,7 +24,7 @@
 				</div>
 
 				<h4><?php _e( 'Willkommen bei Screen Eins', 'wdf' ) ?></h4>
-				<?php /*?><p><?php printf( __( 'Send %s a <a href="%s" title="Send high-five!">high-five!</a>', 'wdf' ), bp_get_displayed_user_fullname(), wp_nonce_url( bp_displayed_user_domain() . bp_current_component() . '/screen-one/send-donation/', 'bp_wdf_send_donation' ) ) ?></p><?php */?>
+				<?php /*?><p><?php printf( __( 'Send %s a <a href="%s" title="Sende ein High-Five!">high-five!</a>', 'wdf' ), bp_get_displayed_user_fullname(), wp_nonce_url( bp_displayed_user_domain() . bp_current_component() . '/screen-one/send-donation/', 'bp_wdf_send_donation' ) ) ?></p><?php */?>
 
 				<?php if ( $donations = bp_wdf_get_donations_for_user( bp_displayed_user_id() ) ) : ?>
 					<h4><?php _e( 'Erhaltene High Fives!', 'wdf' ) ?></h4>

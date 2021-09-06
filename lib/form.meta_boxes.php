@@ -589,7 +589,7 @@ if($pagenow == 'nav-menus.php') { ?>
                         <td><label><?php echo $trans['first_name'].' '.$trans['last_name']; ?></label><br /><a href="mailto:<?php echo $trans['payer_email']; ?>"><?php echo $trans['payer_email']; ?></a></</td>
                         <td><?php echo $trans['gateway']; ?></td>
                         <td><?php echo get_post_modified_time('F d Y', null, $donation->ID) ?></td>
-                        <td><a class="hidden" href="<?php echo get_edit_post_link($donation->ID); ?>">View Details</a></td>
+                        <td><a class="hidden" href="<?php echo get_edit_post_link($donation->ID); ?>">Details anzeigen</a></td>
                     </tr>
                 <?php endforeach; ?>
                 </tbody>

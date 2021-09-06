@@ -121,7 +121,7 @@ function bp_wdf_screen_one() {
 	 * display the corresponding information. The functions are presented below:
 	 */
 	function bp_wdf_screen_one_title() {
-		_e( 'Fundraiser Projects', 'wdf' );
+		_e( 'Spendenprojekte', 'wdf' );
 	}
 
 	function bp_wdf_screen_one_content() {
@@ -137,10 +137,10 @@ function bp_wdf_screen_one() {
 		$send_link = wp_nonce_url( $bp->displayed_user->domain . $bp->current_component . '/screen-one/send-donation', 'bp_wdf_send_donation' );
 	?>
 		<h4><?php _e( 'Your Fundraisers', 'wdf' ) ?></h4>
-		<p><?php printf( __( 'Send %s a <a href="%s" title="Send high-five!">high-five!</a>', 'wdf' ), $bp->displayed_user->fullname, $send_link ) ?></p>
+		<p><?php printf( __( 'Sende %s ein <a href="%s" title="Sende ein High-Five!">High-Five!</a>', 'wdf' ), $bp->displayed_user->fullname, $send_link ) ?></p>
 
 		<?php if ( $donations ) : ?>
-			<h4><?php _e( 'Received Donations!', 'wdf' ) ?></h4>
+			<h4><?php _e( 'Spenden erhalten!', 'wdf' ) ?></h4>
 
 			<table id="bp_wdf_donations">
 				<?php foreach ( $donations as $user_id ) : ?>
@@ -171,10 +171,10 @@ function bp_wdf_screen_two() {
 	if ( bp_is_wdf_component() && bp_is_current_action( 'screen-two' ) && bp_is_action_variable( 'accept', 0 ) ) {
 		if ( bp_wdf_accept_terms() ) {
 			/* Add a success message, that will be displayed in the template on the next page load */
-			bp_core_add_message( __( 'Terms were accepted!', 'wdf' ) );
+			bp_core_add_message( __( 'Bedingungen wurden akzeptiert!', 'wdf' ) );
 		} else {
 			/* Add a failure message if there was a problem */
-			bp_core_add_message( __( 'Terms could not be accepted.', 'wdf' ), 'error' );
+			bp_core_add_message( __( 'Bedingungen konnten nicht akzeptiert werden.', 'wdf' ), 'error' );
 		}
 
 		/**
@@ -187,10 +187,10 @@ function bp_wdf_screen_two() {
 	if ( bp_is_wdf_component() && bp_is_current_action( 'screen-two' ) && bp_is_action_variable( 'reject', 0 ) ) {
 		if ( bp_wdf_reject_terms() ) {
 			/* Add a success message, that will be displayed in the template on the next page load */
-			bp_core_add_message( __( 'Terms were rejected!', 'wdf' ) );
+			bp_core_add_message( __( 'Bedingungen wurden abgelehnt!', 'wdf' ) );
 		} else {
 			/* Add a failure message if there was a problem */
-			bp_core_add_message( __( 'Terms could not be rejected.', 'wdf' ), 'error' );
+			bp_core_add_message( __( 'Bedingungen konnten nicht abgelehnt werden.', 'wdf' ), 'error' );
 		}
 
 		/**
@@ -220,14 +220,14 @@ function bp_wdf_screen_two() {
 	function bp_wdf_screen_two_content() {
 		global $bp; ?>
 
-		<h4><?php _e( 'Recieved Donations', 'wdf' ) ?></h4>
+		<h4><?php _e( 'Erhaltene Spenden', 'wdf' ) ?></h4>
 
 		<?php
-			$accept_link = '<a href="' . wp_nonce_url( $bp->loggedin_user->domain . $bp->wdf->slug . '/screen-two/accept', 'bp_wdf_accept_terms' ) . '">' . __( 'Accept', 'wdf' ) . '</a>';
-			$reject_link = '<a href="' . wp_nonce_url( $bp->loggedin_user->domain . $bp->wdf->slug . '/screen-two/reject', 'bp_wdf_reject_terms' ) . '">' . __( 'Reject', 'wdf' ) . '</a>';
+			$accept_link = '<a href="' . wp_nonce_url( $bp->loggedin_user->domain . $bp->wdf->slug . '/screen-two/accept', 'bp_wdf_accept_terms' ) . '">' . __( 'akzeptieren', 'wdf' ) . '</a>';
+			$reject_link = '<a href="' . wp_nonce_url( $bp->loggedin_user->domain . $bp->wdf->slug . '/screen-two/reject', 'bp_wdf_reject_terms' ) . '">' . __( 'ablehnen', 'wdf' ) . '</a>';
 		?>
 
-		<p><?php printf( __( 'You must %s or %s the terms of use policy.', 'wdf' ), $accept_link, $reject_link ) ?></p>
+		<p><?php printf( __( 'Du musst die Nutzungsbedingungen %s oder %s.', 'wdf' ), $accept_link, $reject_link ) ?></p>
 	<?php
 	}
 
@@ -258,11 +258,11 @@ function bp_wdf_screen_settings_menu() {
 }
 
 	function bp_wdf_screen_settings_menu_header() {
-		_e( 'Fundraising Settings Header', 'wdf' );
+		_e( 'Header der Fundraising-Einstellungen', 'wdf' );
 	}
 
 	function bp_wdf_screen_settings_menu_title() {
-		_e( 'Fundraising Settings', 'wdf' );
+		_e( 'Fundraising-Einstellungen', 'wdf' );
 	}
 
 	function bp_wdf_screen_settings_menu_content() {
@@ -276,7 +276,7 @@ function bp_wdf_screen_settings_menu() {
 
 		<form action="<?php echo $bp->loggedin_user->domain . 'settings/wdf-admin'; ?>" name="bp-wdf-admin-form" id="account-delete-form" class="bp-wdf-admin-form" method="post">
 
-			<input type="checkbox" name="bp-wdf-option-one" id="bp-wdf-option-one" value="1"<?php if ( '1' == get_user_meta( $bp->loggedin_user->id, 'bp-wdf-option-one', true ) ) : ?> checked="checked"<?php endif; ?> /> <?php _e( 'Do you love clicking checkboxes?', 'wdf' ); ?>
+			<input type="checkbox" name="bp-wdf-option-one" id="bp-wdf-option-one" value="1"<?php if ( '1' == get_user_meta( $bp->loggedin_user->id, 'bp-wdf-option-one', true ) ) : ?> checked="checked"<?php endif; ?> /> <?php _e( 'Liebst Du es, auf Kontrollkästchen zu klicken??', 'wdf' ); ?>
 			<p class="submit">
 				<input type="submit" value="<?php _e( 'Einstellungen speichern', 'wdf' ) ?> &raquo;" id="submit" name="submit" />
 			</p>
