@@ -31,8 +31,8 @@
 						<code>[fundraiser_panel id="" style="" show_title="" show_content=""]</code>
 						<p class="attr_description">id: <span class="description"><?php _e('Die ID der Spendenaktion, die Du anzeigen möchtest','wdf'); ?></span></p>
 						<p class="attr_description">style: <span class="description"><?php _e('Ein gültiger geladener Stilname. Dies verwendet den Standard-Spendenstil, wenn kein Stil angegeben ist.','wdf'); ?></span></p>
-						<p class="attr_description">show_title: <span class="description"><?php _e('(Ja/Nein) Zeigt den Titel der Spendenaktion über dem Panel an','wdf'); ?></span></p>
-						<p class="attr_description">show_content: <span class="description"><?php _e('(Ja/Nein) Zeigt den Post-Inhalt der Spendenaktion über dem Panel an','wdf'); ?></span></p>
+						<p class="attr_description">show_title: <span class="description"><?php _e('(yes/no) Zeigt den Titel der Spendenaktion über dem Panel an','wdf'); ?></span></p>
+						<p class="attr_description">show_content: <span class="description"><?php _eJ('(yes/no) Zeigt den Post-Inhalt der Spendenaktion über dem Panel an','wdf'); ?></span></p>
 					</li>
 					<li>
 						<h4><strong><?php _e('Einfache Spendenschaltfläche','wdf'); ?></strong></h4>
@@ -53,8 +53,8 @@
 						<code>[progress_bar id="" style="" show_title="yes/no" show_totals="yes/no"]</code>
 						<p class="attr_description">id: <span class="description"><?php _e('Die ID der Spendenaktion, für die Du einen Fortschrittsbalken anzeigen möchtest.','wdf'); ?></span></p>
 						<p class="attr_description">style: <span class="description"><?php _e('Ein gültiger geladener Stilname. Dies verwendet den Standard-Spendenstil, wenn kein Stil angegeben ist.','wdf'); ?></span></p>
-						<p class="attr_description">show_title: <span class="description"><?php _e('(Ja/Nein) Zeigt den Titel der Spendenaktion über dem Fortschrittsbalken an - Standard: Nein','wdf'); ?></span></p>
-						<p class="attr_description">show_totals: <span class="description"><?php _e('(Ja/Nein) Zeigt das Spendenziel und den Betrag an, der über dem Fortschrittsbalken liegt. - Standard: nein','wdf'); ?></span></p>
+						<p class="attr_description">show_title: <span class="description"><?php _e('(yes/no) Zeigt den Titel der Spendenaktion über dem Fortschrittsbalken an - Standard: Nein','wdf'); ?></span></p>
+						<p class="attr_description">show_totals: <span class="description"><?php _e('(yes/no) Zeigt das Spendenziel und den Betrag an, der über dem Fortschrittsbalken liegt. - Standard: nein','wdf'); ?></span></p>
 					</li>
 				</ul>
 			</div>
@@ -64,6 +64,7 @@
 		<div class="postbox">
 			<h3 class="hndle"><span><?php _e('Brauchst Du Hilfe?','wdf'); ?></span></h3>
 			<div class="inside">
+			<p class="description"><?php _e('Mehr Hilfe findest Du in unserem <a href="https://n3rds.work/forums/forum/psource-support-foren/ps-fundraising-supportforum/" target="_blank" rel="noopener"><strong>PS FUNDRAISING SUPPORT FORUM</strong></a>.','wdf'); ?></p>
 				<form action="<?php echo admin_url('edit.php?post_type=funder&page=wdf'); ?>" method="post">
 					<label><?php _e('Neustart des Einführungstutorials?','wdf'); ?></label>
 					<input type="submit" name="wdf_restart_tutorial" class="button" value="<?php esc_attr(_e('Starte das Tutorial neu','wdf')); ?>" />

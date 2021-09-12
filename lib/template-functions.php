@@ -624,7 +624,7 @@ if(!function_exists('wdf_checkout_page')) {
 		$style = ($wdf_checkout_from_panel == true ? '' : wdf_get_style($post_id) );
 		$style = wdf_get_style($post_id);
 
-		$content .= '<form class="wdf_checkout_form '.$style.'" action="'.wdf_get_funder_page('checkout',$post_id).'" method="post">';
+		$content .= '<form style="display: inline-block" class="wdf_checkout_form '.$style.'" action="'.wdf_get_funder_page('checkout',$post_id).'" method="post">';
 			global $wp_filter;
 			$raised = $wdf->get_amount_raised($post_id);
 			//$goal = $meta['wdf_goal_amount'][0];
