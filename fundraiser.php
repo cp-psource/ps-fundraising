@@ -3,7 +3,7 @@
 Plugin Name: PS Fundraising
 Plugin URI: https://n3rds.work/piestingtal_source/ps-fundraising/
 Description: Erstelle eine Spendenseite für jeden Zweck oder jedes Projekt.
-Version: 2.7.3
+Version: 2.7.4
 Text Domain: wdf
 Author: WMS N@W
 Author URI: https://n3rds.work
@@ -24,7 +24,7 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
-require 'lib/psource-plugin-update/plugin-update-checker.php';
+require 'psource/psource-plugin-update/plugin-update-checker.php';
 $MyUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 	'https://n3rds.work//wp-update-server/?action=get_metadata&slug=ps-fundraising',
 	__FILE__, 
@@ -76,7 +76,7 @@ if(isset($_POST['wdf_reset']) && current_user_can('wdf_edit_settings')) {
 
 class WDF {
 	function _vars() {
-		$this->version = '2.7.3';
+		$this->version = '2.7.4';
 		$this->defaults = array(
 			'currency' => 'EUR',
 			'dir_slug' => __('spendenaktionen','wdf'),
