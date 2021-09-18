@@ -20,12 +20,14 @@ Deinen Besuchern einen Anteil am Gewinn zu bieten, indem sie für Deine Webseite
 
 [POWERED BY PSOURCE](https://n3rds.work/psource_kategorien/psource-plugins/)
 
+=== Hilfe und Support ===
+
 [Projektseite](https://n3rds.work/piestingtal_source/ps-fundraising/)
 [Handbuch](https://n3rds.work/docs/ps-fundraising-plugin-handbuch/)
 [Supportforum](https://n3rds.work/forums/forum/psource-support-foren/ps-fundraising-plugin-supportforum/)
 [GitHub](https://github.com/piestingtal-source/ps-fundraising)
 
-== Development ==
+== Entwickler ==
 
 Du kannst im Stammordner Deines aktiven Themas neue Dateien erstellen, die beim Anzeigen einer Spendenaktion verwendet werden.
 
