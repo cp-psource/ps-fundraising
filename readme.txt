@@ -4,11 +4,83 @@ Donate link: https://n3rds.work/spendenaktionen/unterstuetze-unsere-psource-free
 Tags: fundraising, spenden, crowdfunding
 Requires at least: 3.0
 Tested up to: 5.6.1
-Stable tag: 2.7.1
+Stable tag: 2.7.2
 License: GPLv2 or later
 
 Fundraising ist unsere Weiterentwicklung des von WPMUDEV eingestellten Fundraising-Plugins.
 Erstelle Spendenbuttons, komplexe Crowdfundingkampagnen oder lasse Deine Besucher Deine Projekte unterstützen.
+
+== Description ==
+
+Affiliates fördern das Geschäft, indem Du alle Deine Benutzer zu einem Teil Deines Marketingteams machst.
+
+Integriert oder eigenständig
+PS Affiliate lässt sich perfekt in unsere PS Bloghosting, PSeCommerce- und PS Mitgliedschaften-Plugins integrieren und ermöglicht es Dir, 
+Deinen Besuchern einen Anteil am Gewinn zu bieten, indem sie für Deine Webseite werben.
+
+[POWERED BY PSOURCE](https://n3rds.work/psource_kategorien/psource-plugins/)
+
+[Projektseite](https://n3rds.work/piestingtal_source/ps-fundraising/)
+[Handbuch](https://n3rds.work/docs/ps-fundraising-plugin-handbuch/)
+[Supportforum](https://n3rds.work/forums/forum/psource-support-foren/ps-fundraising-plugin-supportforum/)
+[GitHub](https://github.com/piestingtal-source/ps-fundraising)
+
+== Für Entwickler ==
+
+Du kannst im Stammordner Deines aktiven Themas neue Dateien erstellen, die beim Anzeigen einer Spendenaktion verwendet werden.
+
+Es gibt 3 Arten von Vorlagen, die Du erstellen kannst.
+
+Vorlagenhierarchie
+
+Einzelne Spendenaktion
+wdf_funder-{ID}.php
+wdf_funder-{slug}.php
+wdf_funder.php
+ 
+Kasse für Spendenaktionen
+wdf_checkout-{ID}.php
+wdf_checkout-{slug}.php
+wdf_checkout.php
+
+Bestätigungsseite für die Spendenaktion
+wdf_confirm-{ID}.php
+wdf_confirm-{slug}.php
+wdf_confirm.php
+
+
+=== Benutzerdefinierte Vorlagenfunktionen ===
+
+Du kannst den Speicherort der Template-Funktionen, die in Fundraising geladen werden, an einen externen Speicherort ändern.
+Dadurch wird sichergestellt, dass alle benutzerdefinierten Änderungen, die Du an Deinen Vorlagenfunktionen vornimmst, bei zukünftigen Aktualisierungen des Plugins nicht beschädigt werden.
+
+Füge in Deiner Datei wp-config.php eine neue define-Anweisung hinzu, die eine Zeichenfolge enthält, die auf den Speicherort verweist.
+define('WDF_CUSTOM_TEMPLATE_FUNCTIONS','/full-server-path/and/filename.php');
+
+
+=== Benutzerdefinierte Stile ===
+
+Füge eine beliebige CSS-Datei zu Deinem Fundraising-/styles/-Ordner hinzu, damit sie in Deinen Einstellungen verfügbar ist.
+
+Du kannst auch einen Ordner namens "wdf-styles" in Deinem wp-content-Ordner erstellen
+
+ODER
+
+Du kannst einen externen Speicherort mit dem folgenden Code in Deiner wp-config.php-Datei festlegen.
+
+define('WDF_EXTERNAL_STYLE_DIRECTORY','/full/server/path/to/styles/')
+
+Standardmäßig ist der Name des Stils der Name der Datei. Du kannst dies manuell mit dem Filter "wdf_custom_style_name" anpassen
+
+Beispiel:
+add_filter('wdf_custom_style_name', 'my_custom_filter_style_name', 10, 2);
+
+function my_custom_filter_style_name($name, $file_name) {
+	if($file_name == 'my-file.css') {
+		$name = "Mein benutzerdefinierter Stil";
+	}
+	return $name;
+}
 
 == Changelog ==
 

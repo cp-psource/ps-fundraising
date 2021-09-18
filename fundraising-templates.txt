@@ -1,50 +1,53 @@
-You can create new files inside your active theme's root folder to be used when displaying a fundraiser.
+Du kannst im Stammordner Deines aktiven Themas neue Dateien erstellen, die beim Anzeigen einer Spendenaktion verwendet werden.
 
-There are 3 types of templates you can create.
+Es gibt 3 Arten von Vorlagen, die Du erstellen kannst.
 
-Template Hierarchy
+Vorlagenhierarchie
 
-Single Fundraiser
+Einzelne Spendenaktion
 wdf_funder-{ID}.php
 wdf_funder-{slug}.php
 wdf_funder.php
  
-Fundraiser Checkout
+Kasse für Spendenaktionen
 wdf_checkout-{ID}.php
 wdf_checkout-{slug}.php
 wdf_checkout.php
 
-Fundraiser Confirmation Page
+Bestätigungsseite für die Spendenaktion
 wdf_confirm-{ID}.php
 wdf_confirm-{slug}.php
 wdf_confirm.php
 
 
-== Custom Template Functions ==
-You can change the location of the template-functions that are loaded in fundraising to an external location.
-This will insure that any custom changes you make to your template functions are not broken when updating the plugin in the future.
+== Benutzerdefinierte Vorlagenfunktionen ==
+Du kannst den Speicherort der Template-Funktionen, die in Fundraising geladen werden, an einen externen Speicherort ändern.
+Dadurch wird sichergestellt, dass alle benutzerdefinierten Änderungen, die Du an Deinen Vorlagenfunktionen vornimmst, bei zukünftigen Aktualisierungen des Plugins nicht beschädigt werden.
 
-Add a new define statement in your wp-config.php file containing a string pointing to the location.
+Füge in Deiner Datei wp-config.php eine neue define-Anweisung hinzu, die eine Zeichenfolge enthält, die auf den Speicherort verweist.
 define('WDF_CUSTOM_TEMPLATE_FUNCTIONS','/full-server-path/and/filename.php');
 
 
-== Custom Styles ==
-Add any CSS file to your fundraising /styles/ folder for it to be available in your settings.
+== Benutzerdefinierte Stile ==
 
-You can also create a folder named "wdf-styles" in your wp-content folder 
-OR 
-you can set an external location using the following code in your wp-config.php file.
+Füge eine beliebige CSS-Datei zu Deinem Fundraising-/styles/-Ordner hinzu, damit sie in Deinen Einstellungen verfügbar ist.
+
+Du kannst auch einen Ordner namens "wdf-styles" in Deinem wp-content-Ordner erstellen
+
+ODER
+
+Du kannst einen externen Speicherort mit dem folgenden Code in Deiner wp-config.php-Datei festlegen.
 
 define('WDF_EXTERNAL_STYLE_DIRECTORY','/full/server/path/to/styles/')
 
-By default the name of the style is the name of the file.  You can manually adjust this using the "wdf_custom_style_name" filter
+Standardmäßig ist der Name des Stils der Name der Datei. Du kannst dies manuell mit dem Filter "wdf_custom_style_name" anpassen
 
-Example:
+Beispiel:
 add_filter('wdf_custom_style_name', 'my_custom_filter_style_name', 10, 2);
 
 function my_custom_filter_style_name($name, $file_name) {
 	if($file_name == 'my-file.css') {
-		$name = "My Custom Style";
+		$name = "Mein benutzerdefinierter Stil";
 	}
 	return $name;
 }

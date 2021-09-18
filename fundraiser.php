@@ -3,7 +3,7 @@
 Plugin Name: PS Fundraising
 Plugin URI: https://n3rds.work/piestingtal_source/ps-fundraising/
 Description: Erstelle eine Spendenseite für jeden Zweck oder jedes Projekt.
-Version: 2.7.1
+Version: 2.7.2
 Text Domain: wdf
 Author: WMS N@W
 Author URI: https://n3rds.work
@@ -76,7 +76,7 @@ if(isset($_POST['wdf_reset']) && current_user_can('wdf_edit_settings')) {
 
 class WDF {
 	function _vars() {
-		$this->version = '2.7.1';
+		$this->version = '2.7.2';
 		$this->defaults = array(
 			'currency' => 'EUR',
 			'dir_slug' => __('spendenaktionen','wdf'),
