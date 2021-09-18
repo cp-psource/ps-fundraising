@@ -25,13 +25,13 @@ Deinen Besuchern einen Anteil am Gewinn zu bieten, indem sie für Deine Webseite
 [Supportforum](https://n3rds.work/forums/forum/psource-support-foren/ps-fundraising-plugin-supportforum/)
 [GitHub](https://github.com/piestingtal-source/ps-fundraising)
 
-== Für Entwickler ==
+== Development ==
 
 Du kannst im Stammordner Deines aktiven Themas neue Dateien erstellen, die beim Anzeigen einer Spendenaktion verwendet werden.
 
 Es gibt 3 Arten von Vorlagen, die Du erstellen kannst.
 
-Vorlagenhierarchie
+=== Vorlagenhierarchie ===
 
 Einzelne Spendenaktion
 wdf_funder-{ID}.php
@@ -72,7 +72,8 @@ define('WDF_EXTERNAL_STYLE_DIRECTORY','/full/server/path/to/styles/')
 
 Standardmäßig ist der Name des Stils der Name der Datei. Du kannst dies manuell mit dem Filter "wdf_custom_style_name" anpassen
 
-Beispiel:
+=== Beispiel: ===
+
 add_filter('wdf_custom_style_name', 'my_custom_filter_style_name', 10, 2);
 
 function my_custom_filter_style_name($name, $file_name) {
