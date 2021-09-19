@@ -85,6 +85,17 @@ function my_custom_filter_style_name($name, $file_name) {
 	return $name;
 }
 
+== Hilf uns ==
+
+Viele, viele Kaffees konsumieren wir während wir an unseren Plugins und Themes arbeiten.
+Wie wärs? Möchtest Du uns mit einer Kaffee-Spende bei der Arbeit an unseren Plugins unterstützen?
+
+=== Unterstütze uns ===
+
+Mach eine [Spende per Überweisung oder PayPal](https://n3rds.work/spendenaktionen/unterstuetze-unsere-psource-free-werke/) wir Danken Dir!
+
+[POWERED BY PSOURCE](https://n3rds.work/psource_kategorien/psource-plugins/)
+
 == Changelog ==
 
 = 2.6.9 =
