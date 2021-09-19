@@ -12,11 +12,23 @@ Erstelle Spendenbuttons, komplexe Crowdfundingkampagnen oder lasse Deine Besuche
 
 == Description ==
 
-Affiliates fördern das Geschäft, indem Du alle Deine Benutzer zu einem Teil Deines Marketingteams machst.
+Fundraising ist unsere Weiterentwicklung des von WPMUDEV eingestellten Fundraising-Plugins.
+Erstelle Spendenbuttons, komplexe Crowdfundingkampagnen oder lasse Deine Besucher Deine Projekte unterstützen.
 
-Integriert oder eigenständig
-PS Affiliate lässt sich perfekt in unsere PS Bloghosting, PSeCommerce- und PS Mitgliedschaften-Plugins integrieren und ermöglicht es Dir, 
-Deinen Besuchern einen Anteil am Gewinn zu bieten, indem sie für Deine Webseite werben.
+=== Spende oder Crowdfunding ===
+
+Crowdfinanziere Dein nächstes Projekt mit Finanzierungszielen und Prämienpaketen oder erstelle schnell eine einzelne Spendenseite mit wiederkehrenden Zahlungsoptionen.
+
+=== Mehr Geld für Dein Projekt ===
+
+Services wie Kickstarter und Indiegogo erheben bis zu 11% Verwaltungsgebühr und Bearbeitungsgebühr. 
+Vergiss die unverschämten Gebühren und stecke die Gelder stattdessen direkt in Deine gemeinnützige, Indie-Plattenveröffentlichung oder verrückte Erfindung.
+
+=== Leistungsstark und einfache Einrichtung ===
+
+Wenn Du nach einem leistungsstarken Fundraising-System mit Tausenden von Einstellungen suchst, ist dies nicht der Fall. 
+Andere Plugins können das. 
+Fundraising fügt nur die Power-Features für einfaches Crowdfunding und schnelles Setup hinzu.
 
 [POWERED BY PSOURCE](https://n3rds.work/psource_kategorien/psource-plugins/)
 
@@ -26,6 +38,10 @@ Deinen Besuchern einen Anteil am Gewinn zu bieten, indem sie für Deine Webseite
 [Handbuch](https://n3rds.work/docs/ps-fundraising-plugin-handbuch/)
 [Supportforum](https://n3rds.work/forums/forum/psource-support-foren/ps-fundraising-plugin-supportforum/)
 [GitHub](https://github.com/piestingtal-source/ps-fundraising)
+
+== Mehr PSOURCE ==
+
+Erweitere die Möglichkeiten von PS Fundraising mit kompatiblen PSOURCE Plugins und Themes
 
 == Entwickler ==
 
