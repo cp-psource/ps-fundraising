@@ -20,7 +20,7 @@ if(!function_exists('fundraiser_panel_shortcode')) {
 			$content .= wdf_fundraiser_panel(false, $atts['id'], 'shortcode', $atts);
 
 		} else {
-			$content .= __('No ID Given','wdf');
+			$content .= __('Keine ID angegeben','wdf');
 		}
 		return $content;
 	}
@@ -34,7 +34,7 @@ if(!function_exists('fundraiser_pledges_shortcode')) {
 			$content .= wdf_pledges_panel(false, $atts['id'], 'shortcode', $atts);
 
 		} else {
-			$content .= __('No ID Given','wdf');
+			$content .= __('Keine ID angegeben','wdf');
 		}
 		return $content;
 	}
@@ -311,7 +311,7 @@ if(!function_exists('wdf_time_left')) {
 				return false;
 
 			$end_date = false;
-			$content = __("Time's Up",'wdf');
+			$content = __("Die Zeit ist um",'wdf');
 			if($echo) {echo $content;} else {return $content;}
 		}
 
@@ -665,7 +665,7 @@ if(!function_exists('wdf_checkout_page')) {
 					}
 					$content .= '
 					<div class="wdf_reward_item wdf_reward_item_none">
-						<div class="wdf_reward_choice"><input type="radio" name="wdf_reward" value="none" /><span class="wdf_level_amount"> '.apply_filters('wdf_no_reward_description',__('None','wdf')).'</span></div>
+						<div class="wdf_reward_choice"><input type="radio" name="wdf_reward" value="none" /><span class="wdf_level_amount"> '.apply_filters('wdf_no_reward_description',__('Keiner','wdf')).'</span></div>
 					</div>';
 			}
 			$content .= '</div>';
@@ -685,7 +685,7 @@ if(!function_exists('wdf_show_checkout')) {
 		if( ((isset($_SESSION['wdf_pledge']) && (int)$_SESSION['wdf_pledge'] < 1) || !isset($_SESSION['wdf_pledge'])) && isset($_POST['wdf_pledge']) ) {
 			$checkout_step = '';
 			global $wdf;
-			$wdf->create_error(sprintf(__('You must pledge at least %s','wdf'),$wdf->format_currency('',1)),'checkout_top');
+			$wdf->create_error(sprintf(__('Du musst mindestens %s spenden','wdf'),$wdf->format_currency('',1)),'checkout_top');
 		}
 
 		switch($checkout_step) {

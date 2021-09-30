@@ -81,7 +81,7 @@ if (!class_exists('Psource_HelpTooltips')) require_once WDF_PLUGIN_BASE_DIR . '/
 								<tbody>
 									<tr valign="top">
 										<th scope="row">
-											<label><?php _e('Singlular Level','wdf'); ?></label>
+											<label><?php _e('Singuläre Ebene','wdf'); ?></label>
 										</th>
 										<td>
 											<input type="text" name="wdf_settings[funder_labels][singular_level]" value="<?php echo esc_attr($settings['funder_labels']['singular_level']); ?>" />
@@ -89,7 +89,7 @@ if (!class_exists('Psource_HelpTooltips')) require_once WDF_PLUGIN_BASE_DIR . '/
 									</tr>
 									<tr valign="top">
 										<th scope="row">
-											<label><?php _e('Plural Level','wdf'); ?></label>
+											<label><?php _e('Pluralebene','wdf'); ?></label>
 										</th>
 										<td>
 											<input type="text" name="wdf_settings[funder_labels][plural_level]" value="<?php echo esc_attr($settings['funder_labels']['plural_level']); ?>" />
@@ -104,7 +104,7 @@ if (!class_exists('Psource_HelpTooltips')) require_once WDF_PLUGIN_BASE_DIR . '/
 
 									<tr valign="top">
 										<th scope="row">
-											<label><?php _e('Singular Name','wdf'); ?></label>
+											<label><?php _e('Singulärer Name','wdf'); ?></label>
 										</th>
 										<td>
 											<input type="text" name="wdf_settings[funder_labels][singular_name]" value="<?php echo esc_attr($settings['funder_labels']['singular_name']); ?>" />
@@ -113,7 +113,7 @@ if (!class_exists('Psource_HelpTooltips')) require_once WDF_PLUGIN_BASE_DIR . '/
 
 									<tr valign="top">
 										<th scope="row">
-											<label><?php _e('Plural Name','wdf'); ?></label>
+											<label><?php _e('Pluralname','wdf'); ?></label>
 										</th>
 										<td>
 											<input type="text" name="wdf_settings[funder_labels][plural_name]" value="<?php echo esc_attr($settings['funder_labels']['plural_name']); ?>" />
@@ -137,7 +137,7 @@ if (!class_exists('Psource_HelpTooltips')) require_once WDF_PLUGIN_BASE_DIR . '/
 									</tr><?php */?>
 									<tr valign="top">
 										<th scope="row">
-											<label><?php _e('Singular Name','wdf'); ?></label>
+											<label><?php _e('Singulärer Name','wdf'); ?></label>
 										</th>
 										<td>
 											<input type="text" name="wdf_settings[donation_labels][singular_name]" value="<?php echo esc_attr($settings['donation_labels']['singular_name']); ?>" />
@@ -145,7 +145,7 @@ if (!class_exists('Psource_HelpTooltips')) require_once WDF_PLUGIN_BASE_DIR . '/
 									</tr>
 									<tr valign="top">
 										<th scope="row">
-											<label><?php _e('Plural Name','wdf'); ?></label>
+											<label><?php _e('Pluralname','wdf'); ?></label>
 										</th>
 										<td>
 											<input type="text" name="wdf_settings[donation_labels][plural_name]" value="<?php echo esc_attr($settings['donation_labels']['plural_name']); ?>" />
@@ -178,7 +178,7 @@ if (!class_exists('Psource_HelpTooltips')) require_once WDF_PLUGIN_BASE_DIR . '/
 									</tr>
 									<tr valign="top">
 										<th scope="row">
-											<label><?php _e('Pro Spendenaktion Checkoutarten zulassen?','wdf'); ?></label>
+											<label><?php _e('Per Spendenaktion Checkoutarten zulassen?','wdf'); ?></label>
 										</th>
 										<td>
 											<select name="wdf_settings[single_checkout_type]">
@@ -209,7 +209,7 @@ if (!class_exists('Psource_HelpTooltips')) require_once WDF_PLUGIN_BASE_DIR . '/
 
 									<tr valign="top">
 										<th scope="row">
-											<label><?php _e('Pro Spendenaktion Stile zulassen','wdf'); ?></label>
+											<label><?php _e('Per Spendenaktion Stile zulassen','wdf'); ?></label>
 										</th>
 										<td>
 											<select name="wdf_settings[single_styles]">
@@ -513,7 +513,7 @@ if (!class_exists('Psource_HelpTooltips')) require_once WDF_PLUGIN_BASE_DIR . '/
 												<label><span class="title"><?php _e('Setze Deine Installation auf die Standardeinstellungen zurück?','wdf'); ?></span></label>
 											</th>
 											<td>
-												<input type="submit" class="button" name="wdf_reset" id="wdf_reset" value="Reset Data" />
+												<input type="submit" class="button" name="wdf_reset" id="wdf_reset" value="Daten zurücksetzen" />
 											</td>
 										</tr>
 									</tbody>
