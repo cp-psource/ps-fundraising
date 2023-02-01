@@ -665,7 +665,7 @@ if(!function_exists('wdf_checkout_page')) {
 					}
 					$content .= '
 					<div class="wdf_reward_item wdf_reward_item_none">
-						<div class="wdf_reward_choice"><input type="radio" name="wdf_reward" value="none" /><span class="wdf_level_amount"> '.apply_filters('wdf_no_reward_description',__('Keiner','wdf')).'</span></div>
+						<div class="wdf_reward_choice"><input type="radio" name="wdf_reward" value="none" /><span class="wdf_level_amount"> '.apply_filters('wdf_no_reward_description',__('Keine Belohnung','wdf')).'</span></div>
 					</div>';
 			}
 			$content .= '</div>';

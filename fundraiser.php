@@ -748,6 +748,9 @@ class WDF {
 							case 'wdf-note.css' :
 								$styles['wdf-note'] = __('Notiz','wdf');
 								break;
+							case 'wdf-note.css' :
+								$styles['wdf-material'] = __('Material','wdf');
+								break;
 							default :
 								if(preg_match('/.css/',$file) ) {
 									$name = apply_filters( 'wdf_custom_style_name', str_replace('.css','',$file), $file );
@@ -758,7 +761,7 @@ class WDF {
 				}
 			}
 		}
-		$styles['wdf-custom'] = __('Keine (Benutzerdefiniertes CSS)','wdf');
+		$styles['wdf-custom'] = __('Benutzerdefiniertes CSS','wdf');
 		$this->styles = $styles;
 	}
 	function load_style($style = false) {

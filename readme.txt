@@ -118,6 +118,10 @@ Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswor
 
 == Changelog ==
 
+= 2.7.5 =
+
+*Hinzugefügt: Material CSS Style
+
 = 2.6.9 =
 
 Behoben: Depecated jQuery ".click()"
