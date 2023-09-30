@@ -35,8 +35,6 @@ Fundraising fügt nur die Power-Features für einfaches Crowdfunding und schnell
 === Hilfe und Support ===
 
 [Projektseite](https://n3rds.work/piestingtal_source/ps-fundraising/)
-[Handbuch](https://n3rds.work/docs/ps-fundraising-plugin-handbuch/)
-[Supportforum](https://n3rds.work/forums/forum/psource-support-foren/ps-fundraising-plugin-supportforum/)
 [GitHub](https://github.com/piestingtal-source/ps-fundraising)
 
 == Mehr PSOURCE ==
