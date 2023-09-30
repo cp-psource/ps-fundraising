@@ -6,10 +6,11 @@ Description: Erstelle eine Spendenseite für jeden Zweck oder jedes Projekt.
 Version: 2.7.4
 Text Domain: wdf
 Author: WMS N@W
+Domain Path: /languages
 Author URI: https://n3rds.work
 
 
-Copyright 2020-2021 DerN3rd (https://n3rds.work)
+Copyright 2020-2023 DerN3rd (https://n3rds.work)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License (Version 2 - GPLv2) as published by
