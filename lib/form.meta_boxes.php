@@ -322,14 +322,14 @@ if($pagenow == 'nav-menus.php') { ?>
                 </p>
             </div>
             <?php endif; ?>
-            <?php if($settings['active_gateways']['paypal']) : ?>
-            <p id="wdf_recurring"><label><?php _e('Wiederkehrende Spenden zulassen?','wdf') ?>
+            <?php if (isset($settings['active_gateways']['paypal']) && $settings['active_gateways']['paypal']) : ?>
+                <p id="wdf_recurring"><label><?php _e('Wiederkehrende Spenden zulassen?', 'wdf') ?>
                     <select name="wdf[recurring]" rel="wdf_recurring" class="wdf_toggle">
-                        <option value="yes" <?php (isset($meta['wdf_recurring'][0]) ? selected($meta['wdf_recurring'][0],'yes') : ''); ?>><?php _e('Ja','wdf'); ?></option>
-                        <option value="no" <?php (isset($meta['wdf_recurring'][0]) ? selected($meta['wdf_recurring'][0],'no') : ''); ?>><?php _e('Nein','wdf'); ?></option>
+                        <option value="yes" <?php (isset($meta['wdf_recurring'][0]) ? selected($meta['wdf_recurring'][0], 'yes') : ''); ?>><?php _e('Ja', 'wdf'); ?></option>
+                        <option value="no" <?php (isset($meta['wdf_recurring'][0]) ? selected($meta['wdf_recurring'][0], 'no') : ''); ?>><?php _e('Nein', 'wdf'); ?></option>
                     </select>
                 </label>
-            </p>
+                </p>
             <?php endif; ?>
             <p>
                 <label><?php _e('Panel Position','wdf') ?>

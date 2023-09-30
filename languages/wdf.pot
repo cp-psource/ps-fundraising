@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PS Fundraising\n"
-"POT-Creation-Date: 2023-09-30 11:26+0200\n"
-"PO-Revision-Date: 2023-09-30 11:26+0200\n"
+"POT-Creation-Date: 2023-09-30 11:47+0200\n"
+"PO-Revision-Date: 2023-09-30 11:47+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -399,6 +399,7 @@ msgid "Summen anzeigen"
 msgstr ""
 
 #: fundraiser.php:1629 fundraiser.php:1692 fundraiser.php:1776
+#: lib/wdf_tutorials.php:53
 msgid "Wähle einen Stil"
 msgstr ""
 
@@ -2201,6 +2202,45 @@ msgid ""
 "Ziele und Belohnungen, wird jedoch nur genehmigt, bis das Ziel erreicht "
 "wurde. Nachdem Du Deine Spendentyp gespeichert hast, hast Du abhängig von "
 "Deiner Wahl zusätzliche Optionen. Genießen!"
+msgstr ""
+
+#: lib/wdf_tutorials.php:45
+msgid "Empfohlene Spendenhöhen"
+msgstr ""
+
+#: lib/wdf_tutorials.php:46
+msgid ""
+"Du kannst Deinen Besuchern Spendenstufen empfehlen, einen Titel, eine kurze "
+"Beschreibung und einen Dollarbetrag für jede Stufe angeben, die sie "
+"erstellen."
+msgstr ""
+
+#: lib/wdf_tutorials.php:49
+msgid "Dankesnachrichten und -E-Mails erstellen"
+msgstr ""
+
+#: lib/wdf_tutorials.php:50
+msgid ""
+"Sende den Benutzer zurück zu einer bestimmten URL, einer beliebigen Post- "
+"oder Seiten-ID oder gib eine benutzerdefinierte Dankesnachricht ein, die mit "
+"Shortcodes angepasst werden kann."
+msgstr ""
+
+#: lib/wdf_tutorials.php:54
+msgid ""
+"Wähle einen Stil, der am besten zu Deiner Webseite passt, oder wende keine "
+"Stile an und verwende Dein eigenes benutzerdefiniertes Css."
+msgstr ""
+
+#: lib/wdf_tutorials.php:57
+msgid "Veröffentlichen oder als Entwurf speichern"
+msgstr ""
+
+#: lib/wdf_tutorials.php:58
+msgid ""
+"Veröffentliche Deine Spendenaktion, oder speichere sie als Entwurf.  Beginne "
+"jetzt mit der Spendensammlung!  Du kannst die Fundraising-URL verwenden oder "
+"die Fundraising-Shortcodes direkt in jede Seite oder jeden Beitrag einfügen."
 msgstr ""
 
 #: lib/widgets/widget.fundraiser_panel.php:16
