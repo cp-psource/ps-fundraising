@@ -42,21 +42,21 @@ $tutorial->add_step(admin_url('post-new.php?post_type=funder'), 'post-new.php', 
 	'content'  => '<p>' . esc_js( __('Dieser Schritt ist entscheidend für die Funktionsweise Deiner Spendenaktion. Denke daran: Einfache Spenden werden automatisch verarbeitet, können jedoch keine Ziele oder Belohnungen festlegen. Advanced Crowdfunding ermöglicht Ziele und Belohnungen, wird jedoch nur genehmigt, bis das Ziel erreicht wurde. Nachdem Du Deine Spendentyp gespeichert hast, hast Du abhängig von Deiner Wahl zusätzliche Optionen. Genießen!', 'wdf') ) . '</p>',
 	'position' => array( 'edge' => 'right', 'align' => 'left' ), 'post_type' => 'funder',
 ));
-/*$tutorial->add_step(admin_url('post-new.php?post_type=funder'), 'post-new.php', '#wdf_levels_table', __('Recommend Donation Levels', 'wdf'), array(
-	'content'  => '<p>' . esc_js( __('You can recommend donation levels to your visitors, provide a title, short description, and dollar amount for each level you create.', 'wdf') ) . '</p>',
+$tutorial->add_step(admin_url('post-new.php?post_type=funder'), 'post-new.php', '#wdf_levels_table', __('Empfohlene Spendenhöhen', 'wdf'), array(
+	'content'  => '<p>' . esc_js( __('Du kannst Deinen Besuchern Spendenstufen empfehlen, einen Titel, eine kurze Beschreibung und einen Dollarbetrag für jede Stufe angeben, die sie erstellen.', 'wdf') ) . '</p>',
 	'position' => array( 'edge' => 'bottom', 'align' => 'right' ), 'post_type' => 'funder',
 ));
-$tutorial->add_step(admin_url('post-new.php?post_type=funder'), 'post-new.php', '#wdf_messages', __('Create Thank You Messages and Emails', 'wdf'), array(
-	'content'  => '<p>' . esc_js( __('Send the user back to a specific url, any post or page ID, or enter a custom thank you message customizable with shortcodes.', 'wdf') ) . '</p>',
+$tutorial->add_step(admin_url('post-new.php?post_type=funder'), 'post-new.php', '#wdf_messages', __('Dankesnachrichten und -E-Mails erstellen', 'wdf'), array(
+	'content'  => '<p>' . esc_js( __('Sende den Benutzer zurück zu einer bestimmten URL, einer beliebigen Post- oder Seiten-ID oder gib eine benutzerdefinierte Dankesnachricht ein, die mit Shortcodes angepasst werden kann.', 'wdf') ) . '</p>',
 	'position' => array( 'edge' => 'bottom', 'align' => 'right' ), 'post_type' => 'funder',
 ));	
-$tutorial->add_step(admin_url('post-new.php?post_type=funder'), 'post-new.php', '#wdf_style', __('Choose A Style', 'wdf'), array(
-	'content'  => '<p>' . esc_js( __('Choose a style that best fits your site, or apply no styles and use your own custom css.', 'wdf') ) . '</p>',
+$tutorial->add_step(admin_url('post-new.php?post_type=funder'), 'post-new.php', '#wdf_style', __('Wähle einen Stil', 'wdf'), array(
+	'content'  => '<p>' . esc_js( __('Wähle einen Stil, der am besten zu Deiner Webseite passt, oder wende keine Stile an und verwende Dein eigenes benutzerdefiniertes Css.', 'wdf') ) . '</p>',
 	'position' => array( 'edge' => 'right', 'align' => 'left' ), 'post_type' => 'funder',
 ));
-$tutorial->add_step(admin_url('post-new.php?post_type=funder'), 'post-new.php', '#submitdiv', __('Publish or Save As Draft', 'wdf'), array(
-	'content'  => '<p>' . esc_js( __('Publish your fundraiser, or save it as a draft.  Now start fundraising!  You can use the fundraiser url or insert the fundraising shortcodes directly into any page or post.', 'wdf')) . '</p>',
+$tutorial->add_step(admin_url('post-new.php?post_type=funder'), 'post-new.php', '#submitdiv', __('Veröffentlichen oder als Entwurf speichern', 'wdf'), array(
+	'content'  => '<p>' . esc_js( __('Veröffentliche Deine Spendenaktion, oder speichere sie als Entwurf.  Beginne jetzt mit der Spendensammlung!  Du kannst die Fundraising-URL verwenden oder die Fundraising-Shortcodes direkt in jede Seite oder jeden Beitrag einfügen.', 'wdf')) . '</p>',
 	'position' => array( 'edge' => 'right', 'align' => 'left' ), 'post_type' => 'funder',
-));*/
+));
 $tutorial->initialize();
 ?>
