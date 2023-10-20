@@ -6,7 +6,9 @@ if($pagenow == 'nav-menus.php') { ?>
 
     <p><a href="#" id="wdf_add_nav_archive" class="button secondary-button"><?php _e('Add Archive Page To Menu','wdf'); ?></a></p>
     <?php
-    $funder_obj['args']->name = 'funder';
+    if (isset($funder_obj['args']) && is_object($funder_obj['args'])) {
+        $funder_obj['args']->name = 'funder';
+    }
     wp_nav_menu_item_post_type_meta_box('', $funder_obj);
 } else {
 

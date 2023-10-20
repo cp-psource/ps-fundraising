@@ -64,11 +64,7 @@
 		<div class="postbox">
 			<h3 class="hndle"><span><?php _e('Brauchst Du Hilfe?','wdf'); ?></span></h3>
 			<div class="inside">
-			<p class="description"><?php _e('Mehr Hilfe findest Du in unserem <a href="https://n3rds.work/forums/forum/psource-support-foren/ps-fundraising-supportforum/" target="_blank" rel="noopener"><strong>PS FUNDRAISING SUPPORT FORUM</strong></a>.','wdf'); ?></p>
-				<form action="<?php echo admin_url('edit.php?post_type=funder&page=wdf'); ?>" method="post">
-					<label><?php _e('Neustart des Einführungstutorials?','wdf'); ?></label>
-					<input type="submit" name="wdf_restart_tutorial" class="button" value="<?php esc_attr(_e('Starte das Tutorial neu','wdf')); ?>" />
-				</form>
+			<p class="description"><?php _e('Mehr Hilfe findest Du in unserem <a href="https://n3rds.work/forums/forum/psource-support-foren/ps-fundraising-supportforum/" target="_blank" rel="noopener"><strong>PS FUNDRAISING SUPPORT FORUM</strong></a>.','wdf'); ?></p>				
 			</div>
 		</div>
 		<?php } ?>

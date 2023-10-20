@@ -78,6 +78,19 @@ if(isset($_POST['wdf_reset']) && current_user_can('wdf_edit_settings')) {
 }
 
 class WDF {
+
+	private $version;
+	private $defaults;
+	private $capabilities;
+	private $styles;
+	private $countries;
+	private $usa_states;
+	private $uk_counties;
+	private $australian_states;
+	private $canadian_provinces;
+	private $eu_countries;
+	private $currencies;
+
 	function _vars() {
 		$this->version = '2.7.4';
 		$this->defaults = array(
@@ -169,10 +182,6 @@ class WDF {
 
 		if(is_admin()) {
 
-			// Load tutorials for first time installations
-			if($settings['first_time'] == '1')
-				add_action( 'admin_init', array(&$this,'tutorial') );
-
 			add_action( 'add_meta_boxes_funder', array(&$this,'add_meta_boxes') );
 			add_action( 'add_meta_boxes_donation', array(&$this,'add_meta_boxes') );
 			add_action( 'admin_head-nav-menus.php', array(&$this,'add_menu_meta_boxes') );
@@ -236,9 +245,9 @@ class WDF {
 			register_widget('WDF_Pledges_Panel');
 		}
 	}
-	function tutorial() {
+	/*function tutorial() {
 		include(WDF_PLUGIN_BASE_DIR .'/lib/wdf_tutorials.php');
-	}
+	}*/
 	function create_funder_labels() {
 		$settings = get_option('wdf_settings');
 
