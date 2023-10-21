@@ -2,10 +2,11 @@
 
 **Erstelle Spendenbuttons, komplexe Crowdfundingkampagnen oder lasse Deine Besucher Deine Projekte unterstützen.**
 
-## Crowdfund your next project complete with funding goals and reward packages, or quickly build a single donation page with recurring payment options.
+## Crowdfunding für Dein nächstes Projekt mit Finanzierungszielen und Belohnungspaketen oder Erstellen einer einzelnen Spendenseite mit wiederkehrenden Zahlungsoptionen.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 
-![fundit-home-735x470](https://premium.wpmudev.org/wp-content/uploads/2012/03/fundit-home-735x470-583x372.jpg) Erstelle, hoste und verwalte Deine Spendenaktionen und behalte alle Erlöse.
+![fundit-home-735x470](https://n3rds.work/wp-content/uploads/2023/10/fundraising-home-735x470-583x372.png) 
+Erstelle, hoste und verwalte Deine Spendenaktionen und behalte alle Erlöse.
 
 ### Mehr Geld für Ihr Projekt
 
@@ -16,9 +17,11 @@ Bei Diensten wie Kickstarter und Indiegogo fallen Verwaltungs- und Bearbeitungsg
 
 Wenn Du nach einem leistungsstarken Fundraising-System mit Tausenden von Einstellungen suchst, ist dies nicht das Richtige. Andere Plugins können das tun. Fundraising bietet genau die leistungsstarken Funktionen für einfaches Crowdfunding und eine schnelle Einrichtung.
 
-![funding-page-735x470](https://premium.wpmudev.org/wp-content/uploads/2012/03/funding-page-735x470-583x372.jpg) Alle wichtigen Funktionen zum einfachen Verwalten einer Spendenaktion auf Deiner Webseite.
+![funding-page-735x470](https://n3rds.work/wp-content/uploads/2023/10/fundraising-page-735x470-583x372.png) 
+Alle wichtigen Funktionen zum einfachen Verwalten einer Spendenaktion auf Deiner Webseite.
 
-![fundraising-shortcode-735x470](https://premium.wpmudev.org/wp-content/uploads/2012/03/fundraising-shortcode-735x470-583x373.jpg) Füge mit dem Shortcode-Generator schnell Fundraising-Funktionen in jeden Beitrag ein.
+![fundraising-shortcode-735x470](https://n3rds.work/wp-content/uploads/2023/10/fundraising-shortcode-735x470-583x373.png) 
+Füge mit dem Shortcode-Generator schnell Fundraising-Funktionen in jeden Beitrag ein.
 
 ### In Dein Theme integrieren
 
@@ -32,43 +35,44 @@ Das Fundraising umfasst zur Vereinfachung die Paypal-Integration oder ermöglich
 
 Lege ein Start- und Enddatum mit einem bestimmten Ziel fest und warte mit der Zahlung, bis das Projekt finanziert ist, oder nimm Spenden entgegen, sobald sie eingehen. Erstelle Prämienpakete und begrenze die Verfügbarkeit, um potenzielle Unterstützer zu motivieren. Fundraising macht es einfach!
 
-![fundraiser-simple-735x470](https://premium.wpmudev.org/wp-content/uploads/2012/03/fundraiser-simple-735x470-583x373.jpg) Biete Belohnungen an, um Benutzer zu einer schnellen Reaktion zu inspirieren
+![fundraiser-simple-735x470](https://n3rds.work/wp-content/uploads/2023/10/fundraiser-simple-735x470-583x373.png) 
+Biete Belohnungen an, um Benutzer zu einer schnellen Reaktion zu inspirieren
 
 ### PS Fundraising
 
 **Erstelle eine Spendenseite für jeden Zweck oder jedes Projekt..**
 
-![fundraising-code](https://premium.wpmudev.org/wp-content/uploads/2012/03/fundraising-code.png)
+![fundraising-code](https://n3rds.work/wp-content/uploads/2023/10/fundraising-code.png)
 
 **Einfache Spenden**
 
 Nimm kontinuierliche Spenden ohne Enddatum entgegen. Ideal für gemeinnützige Organisationen und von Spendern unterstützte Organisationen.
 
-![crowdfund](https://premium.wpmudev.org/wp-content/uploads/2012/03/crowdfund.png)
+![crowdfund](https://n3rds.work/wp-content/uploads/2023/10/crowdfund.png)
 
 **Erweitertes Crowdfunding**
 
 Genehmige Zuschüsse und warte dann mit der Zahlungsabwicklung, bis Dein Ziel erreicht ist – wie bei Kickstarter.
 
-![Shortcodes](https://premium.wpmudev.org/wp-content/uploads/2012/03/shortcodes.png)
+![Shortcodes](https://n3rds.work/wp-content/uploads/2023/10/shortcodes.png)
 
 **Anzeigestile**
 
 Wähle einen der enthaltenen Stile (Basic, Dark, Fresh, Minimal, Note) oder erstelle einen benutzerdefinierten Stil.
 
-![Kalender](https://premium.wpmudev.org/wp-content/uploads/2012/03/calendar.png)
+![Kalender](https://n3rds.work/wp-content/uploads/2023/10/calendar.png)
 
 **Start- und Enddatum**
 
 Plane Dein Start- und Enddatum, um bei zeitkritischen Projekten Dringlichkeit zu schaffen.
 
-![E-Mail](https://premium.wpmudev.org/wp-content/uploads/2012/03/email.png)
+![E-Mail](https://n3rds.work/wp-content/uploads/2023/10/email.png)
 
 **Vielen Dank und Follow-up**
 
 Integrierte automatische Antwort-E-Mails senden Dankesnachrichten und Bestätigungs-E-Mails.
 
-![Belohnung](https://premium.wpmudev.org/wp-content/uploads/2012/03/reward.png)
+![Belohnung](https://n3rds.work/wp-content/uploads/2023/10/reward.png)
 
 **Belohnung**
 
