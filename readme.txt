@@ -4,7 +4,7 @@ Donate link: https://n3rds.work/spendenaktionen/unterstuetze-unsere-psource-free
 Tags: fundraising, spenden, crowdfunding
 Requires at least: 3.0
 Tested up to: 5.6.1
-Stable tag: 2.7.5
+Stable tag: 2.7.6
 License: GPLv2 or later
 
 Fundraising ist unsere Weiterentwicklung des von WPMUDEV eingestellten Fundraising-Plugins.
@@ -115,6 +115,14 @@ Mach eine [Spende per Überweisung oder PayPal](https://n3rds.work/spendenaktion
 Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswork-digalize-das-piestingtal/newsletter-management/) über unsere Piestingtal.Source informiert!
 
 == Changelog ==
+
+= 2.7.6 =
+
+* Jede Menge jQuery Fixes
+* Etliche Anpassungen für PhP8
+* Tutorial entfernt, Tooltips sind selbstbeschreibend
+* README.md Hinzugefügt
+* Material Style verfeinert
 
 = 2.7.5 =
 
