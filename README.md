@@ -1,38 +1,38 @@
 # Fundraising WordPress Plugin
 
-**INACTIVE NOTICE: This plugin is unsupported by WPMUDEV, we've published it here for those technical types who might want to fork and maintain it for their needs.**
+**Erstelle Spendenbuttons, komplexe Crowdfundingkampagnen oder lasse Deine Besucher Deine Projekte unterstützen.**
 
 ## Crowdfund your next project complete with funding goals and reward packages, or quickly build a single donation page with recurring payment options.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 
-![fundit-home-735x470](https://premium.wpmudev.org/wp-content/uploads/2012/03/fundit-home-735x470-583x372.jpg) Create, host and manage your fundraisers and keep all the proceeds.
+![fundit-home-735x470](https://premium.wpmudev.org/wp-content/uploads/2012/03/fundit-home-735x470-583x372.jpg) Erstelle, hoste und verwalte Deine Spendenaktionen und behalte alle Erlöse.
 
-### More Money for Your Project
+### Mehr Geld für Ihr Projekt
 
-Services like Kickstarter and Indiegogo take as much as 11% for admin and processing fees. Lose the outrageous fees and put the funds directly into your nonprofit, indie record release, or crazy invention instead.
+Bei Diensten wie Kickstarter und Indiegogo fallen Verwaltungs- und Bearbeitungsgebühren von bis zu 11 % an. Verzichte auf die unverschämten Gebühren und stecke das Geld stattdessen direkt in Deine gemeinnützige Organisation, Indie-Plattenveröffentlichung oder verrückte Erfindung.
 
 
-### Power Features & Simple Setup
+### Leistungsfunktionen und einfache Einrichtung
 
-If you're looking for a heavy duty fundraising system with thousands of settings – this isn't it. Other plugins can do that. Fundraising adds just the power-features for simple crowdfunding and quick setup.
+Wenn Du nach einem leistungsstarken Fundraising-System mit Tausenden von Einstellungen suchst, ist dies nicht das Richtige. Andere Plugins können das tun. Fundraising bietet genau die leistungsstarken Funktionen für einfaches Crowdfunding und eine schnelle Einrichtung.
 
-![funding-page-735x470](https://premium.wpmudev.org/wp-content/uploads/2012/03/funding-page-735x470-583x372.jpg) All the key features to easily manage a fundraiser on your site.
+![funding-page-735x470](https://premium.wpmudev.org/wp-content/uploads/2012/03/funding-page-735x470-583x372.jpg) Alle wichtigen Funktionen zum einfachen Verwalten einer Spendenaktion auf Deiner Webseite.
 
-![fundraising-shortcode-735x470](https://premium.wpmudev.org/wp-content/uploads/2012/03/fundraising-shortcode-735x470-583x373.jpg) Quickly insert Fundraising features into any post with the shortcode generator.
+![fundraising-shortcode-735x470](https://premium.wpmudev.org/wp-content/uploads/2012/03/fundraising-shortcode-735x470-583x373.jpg) Füge mit dem Shortcode-Generator schnell Fundraising-Funktionen in jeden Beitrag ein.
 
-### Integrate With Your Theme
+### In Dein Theme integrieren
 
-The easy ‘getting started’ guide will have you creating fundraisers immediately. Five included style templates, the in-post shortcode generator and built-in widgets make integration with your existing theme simple.
+Mit dem einfachen Leitfaden „Erste Schritte“ kannst Du sofort Spendenaktionen erstellen. Fünf enthaltene Stilvorlagen, der In-Post-Shortcode-Generator und integrierte Widgets erleichtern die Integration in Dein bestehendes Theme.
 
-### Easy Payment Processing
+### Einfache Zahlungsabwicklung
 
-Fundraising includes Paypal integration for convenience or lets you keep 100% of the donation with a manual processing option. Watch your progress bar climb. Process gifts in real-time at your next event. Input cash gifts, credit cards and pledges.
+Das Fundraising umfasst zur Vereinfachung die Paypal-Integration oder ermöglicht es Dir, 100 % der Spende mit einer manuellen Verarbeitungsoption zu behalten. Beobachte wie Dein Fortschrittsbalken steigt. Verarbeite Geschenke in Echtzeit bei Deiner nächsten Veranstaltung. Gib Geldgeschenke, Kreditkarten und Zusagen ein.
 
-### Rewards & Milestones
+### Belohnungen und Meilensteine
 
-Set a start and end date with a specific goal and wait to take payment until the project is funded, or take donations as they come in. Create reward packages and limit availability to motivate potential supporters. Fundraising makes it easy!
+Lege ein Start- und Enddatum mit einem bestimmten Ziel fest und warte mit der Zahlung, bis das Projekt finanziert ist, oder nimm Spenden entgegen, sobald sie eingehen. Erstelle Prämienpakete und begrenze die Verfügbarkeit, um potenzielle Unterstützer zu motivieren. Fundraising macht es einfach!
 
-![fundraiser-simple-735x470](https://premium.wpmudev.org/wp-content/uploads/2012/03/fundraiser-simple-735x470-583x373.jpg) Offer rewards to help inspire users to respond quickly
+![fundraiser-simple-735x470](https://premium.wpmudev.org/wp-content/uploads/2012/03/fundraiser-simple-735x470-583x373.jpg) Biete Belohnungen an, um Benutzer zu einer schnellen Reaktion zu inspirieren
 
 ### PS Fundraising
 
