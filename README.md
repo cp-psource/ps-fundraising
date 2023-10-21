@@ -6,7 +6,8 @@
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 
 ![fundit-home-735x470](https://n3rds.work/wp-content/uploads/2023/10/fundraising-home-735x470-583x372.png) 
-Erstelle, hoste und verwalte Deine Spendenaktionen und behalte alle Erlöse.
+
+    Erstelle, hoste und verwalte Deine Spendenaktionen und behalte alle Erlöse.
 
 ### Mehr Geld für Ihr Projekt
 
@@ -18,10 +19,12 @@ Bei Diensten wie Kickstarter und Indiegogo fallen Verwaltungs- und Bearbeitungsg
 Wenn Du nach einem leistungsstarken Fundraising-System mit Tausenden von Einstellungen suchst, ist dies nicht das Richtige. Andere Plugins können das tun. Fundraising bietet genau die leistungsstarken Funktionen für einfaches Crowdfunding und eine schnelle Einrichtung.
 
 ![funding-page-735x470](https://n3rds.work/wp-content/uploads/2023/10/fundraising-page-735x470-583x372.png) 
-Alle wichtigen Funktionen zum einfachen Verwalten einer Spendenaktion auf Deiner Webseite.
+
+    Alle wichtigen Funktionen zum einfachen Verwalten einer Spendenaktion auf Deiner Webseite.
 
 ![fundraising-shortcode-735x470](https://n3rds.work/wp-content/uploads/2023/10/fundraising-shortcode-735x470-583x373.png) 
-Füge mit dem Shortcode-Generator schnell Fundraising-Funktionen in jeden Beitrag ein.
+
+    Füge mit dem Shortcode-Generator schnell Fundraising-Funktionen in jeden Beitrag ein.
 
 ### In Dein Theme integrieren
 
@@ -36,7 +39,8 @@ Das Fundraising umfasst zur Vereinfachung die Paypal-Integration oder ermöglich
 Lege ein Start- und Enddatum mit einem bestimmten Ziel fest und warte mit der Zahlung, bis das Projekt finanziert ist, oder nimm Spenden entgegen, sobald sie eingehen. Erstelle Prämienpakete und begrenze die Verfügbarkeit, um potenzielle Unterstützer zu motivieren. Fundraising macht es einfach!
 
 ![fundraiser-simple-735x470](https://n3rds.work/wp-content/uploads/2023/10/fundraiser-simple-735x470-583x373.png) 
-Biete Belohnungen an, um Benutzer zu einer schnellen Reaktion zu inspirieren
+
+    Biete Belohnungen an, um Benutzer zu einer schnellen Reaktion zu inspirieren
 
 ### PS Fundraising
 
