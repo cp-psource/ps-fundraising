@@ -7,7 +7,7 @@
 
 ![fundit-home-735x470](https://n3rds.work/wp-content/uploads/2023/10/fundraising-home-735x470-583x372.png) 
 
-    Erstelle, hoste und verwalte Deine Spendenaktionen und behalte alle Erlöse.
+Erstelle, hoste und verwalte Deine Spendenaktionen und behalte alle Erlöse.
 
 ### Mehr Geld für Ihr Projekt
 
@@ -20,11 +20,11 @@ Wenn Du nach einem leistungsstarken Fundraising-System mit Tausenden von Einstel
 
 ![funding-page-735x470](https://n3rds.work/wp-content/uploads/2023/10/fundraising-page-735x470-583x372.png) 
 
-    Alle wichtigen Funktionen zum einfachen Verwalten einer Spendenaktion auf Deiner Webseite.
+Alle wichtigen Funktionen zum einfachen Verwalten einer Spendenaktion auf Deiner Webseite.
 
 ![fundraising-shortcode-735x470](https://n3rds.work/wp-content/uploads/2023/10/fundraising-shortcode-735x470-583x373.png) 
 
-    Füge mit dem Shortcode-Generator schnell Fundraising-Funktionen in jeden Beitrag ein.
+Füge mit dem Shortcode-Generator schnell Fundraising-Funktionen in jeden Beitrag ein.
 
 ### In Dein Theme integrieren
 
@@ -40,7 +40,7 @@ Lege ein Start- und Enddatum mit einem bestimmten Ziel fest und warte mit der Za
 
 ![fundraiser-simple-735x470](https://n3rds.work/wp-content/uploads/2023/10/fundraiser-simple-735x470-583x373.png) 
 
-    Biete Belohnungen an, um Benutzer zu einer schnellen Reaktion zu inspirieren
+Biete Belohnungen an, um Benutzer zu einer schnellen Reaktion zu inspirieren
 
 ### PS Fundraising
 
