@@ -1,16 +1,15 @@
 jQuery(document).ready(function($) {
 
-    $('form#post').submit(function(e) {
-        if ($('#titlediv input').val() == '') {
+    $('form#post').on('submit', function(e) {
+        if ($('#titlediv input').val() === '') {
             e.preventDefault();
             alert(wdf.title_remind);
             return false;
         }
-
     });
 
 
-    $('#wdf_type input').change(function(e) {
+    $('#wdf_type input').on('change', function(e) {
         if ($(this).val() == 'simple') {
             $('#wdf_has_goal').prop("disabled", false).val('0').trigger("change");
             $('#wdf_recurring').show();
@@ -92,15 +91,18 @@ jQuery(document).ready(function($) {
             return string.substr(12, 1);
     }
 
-    $('.wdf_actvity_level').hover(function() {
+    // Hover effect
+    $('.wdf_actvity_level').on('mouseenter', function() {
         $(this).find('td:last a').show();
-    }, function() {
+    }).on('mouseleave', function() {
         $(this).find('td:last a').hide();
     });
+
+    // Progress bar initialization
     $('.wdf_goal_progress').progressbar({
         value: 0,
         create: function() {
-            $(this).progressbar("option", "value", Math.round(parseInt($(this).attr('total') * 100)) / parseInt($(this).attr('goal')));
+            $(this).progressbar("option", "value", Math.round(parseInt($(this).attr('total') * 100) / parseInt($(this).attr('goal'))));
         }
     });
 

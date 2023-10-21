@@ -760,7 +760,7 @@ class WDF {
 							case 'wdf-note.css' :
 								$styles['wdf-note'] = __('Notiz','wdf');
 								break;
-							case 'wdf-note.css' :
+							case 'wdf-material.css' :
 								$styles['wdf-material'] = __('Material','wdf');
 								break;
 							default :

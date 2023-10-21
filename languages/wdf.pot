@@ -890,35 +890,35 @@ msgstr ""
 msgid "Netzwerkspendenoptionen"
 msgstr ""
 
-#: lib/external/class.pointers_tutorial.php:134
+#: lib/classes/class.pointers_tutorial.php:134
 msgid "Tutorial"
 msgstr ""
 
-#: lib/external/class.pointers_tutorial.php:420
+#: lib/classes/class.pointers_tutorial.php:420
 msgid "Weiter &raquo;"
 msgstr ""
 
-#: lib/external/class.pointers_tutorial.php:435
-#: lib/external/class.pointers_tutorial.php:457
+#: lib/classes/class.pointers_tutorial.php:435
+#: lib/classes/class.pointers_tutorial.php:457
 msgid "Beenden"
 msgstr ""
 
-#: lib/external/class.pointers_tutorial.php:436
-#: lib/external/class.pointers_tutorial.php:458
+#: lib/classes/class.pointers_tutorial.php:436
+#: lib/classes/class.pointers_tutorial.php:458
 #, php-format
 msgid "Beenden %s"
 msgstr ""
 
-#: lib/external/class.pointers_tutorial.php:442
+#: lib/classes/class.pointers_tutorial.php:442
 msgid "&laquo; Vorherige"
 msgstr ""
 
-#: lib/external/class.pointers_tutorial.php:496
+#: lib/classes/class.pointers_tutorial.php:496
 #, php-format
 msgid "%s: Schritt %d von %d"
 msgstr ""
 
-#: lib/external/class.wd_help_tooltips.php:297
+#: lib/classes/class.wd_help_tooltips.php:297
 msgid "Hilfe"
 msgstr ""
 

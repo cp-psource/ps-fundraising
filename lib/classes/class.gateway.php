@@ -7,6 +7,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 if(!class_exists('WDF_Gateway')) {
 	class WDF_Gateway {
 
+		public $ipn_url = '';
+
 		//private gateway slug. Lowercase alpha (a-z) and dashes (-) only please!
 			var $plugin_name = '';
 

@@ -57,7 +57,7 @@ jQuery(document).ready( function($) {
 		}
 	}).bullseye();
 
-	$('.wdf_donate_btn.oneclick').on("click", function() {
+	$('.wdf_donate_btn.oneclick').on('click', function() {
 		$(this).parents('form').trigger('submit');
 		return false;
 	});

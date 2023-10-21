@@ -13,7 +13,7 @@ if($pagenow == 'nav-menus.php') { ?>
 } else {
 
     //Setup tooltips for all metaboxes
-    if (!class_exists('Psource_HelpTooltips')) require_once WDF_PLUGIN_BASE_DIR . '/lib/external/class.wd_help_tooltips.php';
+    if (!class_exists('Psource_HelpTooltips')) require_once WDF_PLUGIN_BASE_DIR . '/lib/classes/class.wd_help_tooltips.php';
     $tips = new Psource_HelpTooltips();
     $tips->set_icon_url(WDF_PLUGIN_URL.'/img/information.png');
 

@@ -2,6 +2,15 @@
 if(!class_exists('WDF_Gateway_PayPal')) {
 	class WDF_Gateway_PayPal extends WDF_Gateway {
 
+		private $query = '';
+		private $API_Username = '';
+		private $API_Password = '';
+		private $API_Signature = '';
+		private $Standard_Endpoint = '';
+		private $Adaptive_Endpoint = '';
+		private $paypalURL = '';
+		private $appId = '';
+
 		// Private gateway slug. Lowercase alpha (a-z) and dashes (-) only please!
 		var $plugin_name = 'paypal';
 
@@ -663,7 +672,7 @@ if(!class_exists('WDF_Gateway_PayPal')) {
 		}
 
 		function admin_settings() {
-			if (!class_exists('Psource_HelpTooltips')) require_once WDF_PLUGIN_BASE_DIR . '/lib/external/class.wd_help_tooltips.php';
+			if (!class_exists('Psource_HelpTooltips')) require_once WDF_PLUGIN_BASE_DIR . '/lib/classes/class.wd_help_tooltips.php';
 				$tips = new Psource_HelpTooltips();
 				$tips->set_icon_url(WDF_PLUGIN_URL.'/img/information.png');
 				$settings = get_option('wdf_settings'); ?>

@@ -1,7 +1,7 @@
 <?php
 $settings = get_option('wdf_settings');
 
-if (!class_exists('Psource_HelpTooltips')) require_once WDF_PLUGIN_BASE_DIR . '/lib/external/class.wd_help_tooltips.php';
+if (!class_exists('Psource_HelpTooltips')) require_once WDF_PLUGIN_BASE_DIR . '/lib/classes/class.wd_help_tooltips.php';
 	$tips = new Psource_HelpTooltips();
 	$tips->set_icon_url(WDF_PLUGIN_URL.'/img/information.png');
 
@@ -533,16 +533,16 @@ if (!class_exists('Psource_HelpTooltips')) require_once WDF_PLUGIN_BASE_DIR . '/
 				<p class="submit"><input type="submit" value="Änderungen speichern" class="button-primary" name="save_settings" /></p>
 			</form>
 	<script type="text/javascript">
-		jQuery(document).ready( function($) {
+		jQuery(document).ready(function($) {
 			$('#wdf_reset').on("click", function(e) {
 				var check = confirm("Bist du sicher, dass du das machen willst? Du verlierst alle Daten, die mit Deinen Spenden und Einstellungen für Spendenaktionen verbunden sind!");
-				if (check == true)  {
+				if (check == true) {
 					return true;
 				} else {
 					return false;
 				}
 			});
-			$('input.wdf_auto_submit').change(function(e) {
+			$('input.wdf_auto_submit').on('change', function(e) {
 				$(this).parents('form').trigger('submit');
 				return false;
 			});
