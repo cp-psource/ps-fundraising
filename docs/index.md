@@ -1,9 +1,9 @@
 ---
 layout: psource-theme
-title: "Multiste-Reader"
+title: "PS Fundraising"
 ---
 
-<h2 align="center" style="color:#38c2bb;">📚 Multiste-Reader</h2>
+<h2 align="center" style="color:#38c2bb;">📚 PS Fundraising</h2>
 
 <div class="menu"> 
   <a href="https://github.com/cp-psource/ps-fundraising/discussions" style="color:#38c2bb;">💬 Forum</a> 
