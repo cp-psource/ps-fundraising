@@ -170,6 +170,11 @@ function wdf_stripe_create_session() {
     $amount = isset($_SESSION['wdf_pledge']) ? $_SESSION['wdf_pledge'] : 0;
     $currency = isset($settings['currency']) ? strtolower($settings['currency']) : 'eur';
 
+    $post_id = isset($_SESSION['wdf_pledge_post_id']) ? intval($_SESSION['wdf_pledge_post_id']) : 0;
+    if (!$post_id) {
+        wp_send_json_error(['error' => 'Keine Post-ID in Session!'], 400);
+    }
+
     if (!$amount || !$settings['stripe']['secret_key']) {
         wp_send_json_error([
             'error' => 'Amount or Stripe key missing',
@@ -178,24 +183,34 @@ function wdf_stripe_create_session() {
         ], 400);
     }
 
-    try {
-        $session = \Stripe\Checkout\Session::create([
-            'payment_method_types' => ['card'],
-            'line_items' => [[
-                'price_data' => [
-                    'currency' => $currency,
-                    'product_data' => [
-                        'name' => __('Spende', 'wdf'),
-                    ],
-                    'unit_amount' => $amount * 100,
+    $success_url = add_query_arg('wdf_stripe_success', 1, wdf_get_funder_page('confirmation', $post_id));
+    $cancel_url  = add_query_arg('wdf_stripe_cancel', 1, wdf_get_funder_page('checkout', $post_id));
+
+    // HIER: Session-Array bauen!
+    $session_args = [
+        'payment_method_types' => ['card'],
+        'line_items' => [[
+            'price_data' => [
+                'currency' => $currency,
+                'product_data' => [
+                    'name' => __('Spende', 'wdf'),
                 ],
-                'quantity' => 1,
-            ]],
-            'mode' => 'payment',
-            'success_url' => add_query_arg('wdf_stripe_success', 1, wdf_get_funder_page('confirmation')),
-            'cancel_url' => add_query_arg('wdf_stripe_cancel', 1, wdf_get_funder_page('checkout')),
-            'client_reference_id' => isset($_SESSION['wdf_pledge_id']) ? $_SESSION['wdf_pledge_id'] : '',
-        ]);
+                'unit_amount' => $amount * 100,
+            ],
+            'quantity' => 1,
+        ]],
+        'mode' => 'payment',
+        'success_url' => $success_url,
+        'cancel_url'  => $cancel_url,
+    ];
+
+    // client_reference_id NUR setzen, wenn vorhanden!
+    if (!empty($_SESSION['wdf_pledge_id'])) {
+        $session_args['client_reference_id'] = $_SESSION['wdf_pledge_id'];
+    }
+
+    try {
+        $session = \Stripe\Checkout\Session::create($session_args);
         wp_send_json(['id' => $session->id]);
     } catch (Exception $e) {
         wp_send_json_error(['error' => $e->getMessage()], 400);

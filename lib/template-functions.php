@@ -438,59 +438,67 @@ if(!function_exists('wdf_total_backers')) {
 }
 
 if(!function_exists('wdf_confirmation_page')) {
-	function wdf_confirmation_page( $echo = true, $post_id = '' ) {
-		global $wdf; $content = '';
-		$settings = get_option('wdf_settings');
+    function wdf_confirmation_page( $echo = true, $post_id = '' ) {
+        global $wdf; $content = '';
+        $settings = get_option('wdf_settings');
 
-		$pledge_id = (isset($_SESSION['wdf_pledge_id']) ? $_SESSION['wdf_pledge_id'] : (isset($_REQUEST['pledge_id']) ? $_REQUEST['pledge_id'] : ''));
-		if(empty($post_id))	 {
-			global $post;
-			$post_id = $post->ID;
-		}
-		$wdf->front_scripts($post_id);
-		$content .= '<div class="wdf_confirmation_page">';
-		if( get_post($post_id) && $pledge = get_page_by_title( $pledge_id, null, 'donation' ) ) {
+        $pledge_id = (isset($_SESSION['wdf_pledge_id']) ? $_SESSION['wdf_pledge_id'] : (isset($_REQUEST['wdf_pledge_id']) ? $_REQUEST['wdf_pledge_id'] : ''));
+        if(empty($post_id)) {
+            global $post;
+            $post_id = $post->ID;
+        }
+        $wdf->front_scripts($post_id);
+        $content .= '<div class="wdf_confirmation_page">';
+        if ( get_post($post_id) ) {
+            $pledge_query = new WP_Query([
+                'post_type'      => 'donation',
+                'title'          => $pledge_id,
+                'post_status'    => 'any',
+                'posts_per_page' => 1,
+            ]);
+            $pledge = $pledge_query->have_posts() ? $pledge_query->posts[0] : false;
 
-			$transaction = $wdf->get_transaction($pledge->ID);
+            if ( $pledge ) {
+                $transaction = $wdf->get_transaction($pledge->ID);
 
-			if(isset($_SESSION['wdf_bp_activity']) && $_SESSION['wdf_bp_activity'] == true) {
-				global $bp;
-				if( isset($bp->loggedin_user->id) && $bp->loggedin_user->id ) {
-					$activity_args = array(
-						'action' => sprintf( __('%s hat mit %s %s eine Unterstützung für %s geleistet','wdf'), '<a href="'.$bp->loggedin_user->domain.'">'.$bp->loggedin_user->fullname.'</a>', $wdf->format_currency('',$transaction['gross']), esc_attr($settings['donation_labels']['singular_name']), '<a href="'.wdf_get_funder_page('',$post_id).'">'.get_the_title($post_id).'</a>' ),
-						'primary_link' => wdf_get_funder_page('',$post_id),
-						'type' => 'pledge'
-					);
-					$activity_args = apply_filters('wdf_bp_activity_args',$activity_args);
-					bp_wdf_record_activity($activity_args);
+                if(isset($_SESSION['wdf_bp_activity']) && $_SESSION['wdf_bp_activity'] == true) {
+                    global $bp;
+                    if( isset($bp->loggedin_user->id) && $bp->loggedin_user->id ) {
+                        $activity_args = array(
+                            'action' => sprintf( __('%s hat mit %s %s eine Unterstützung für %s geleistet','wdf'), '<a href="'.$bp->loggedin_user->domain.'">'.$bp->loggedin_user->fullname.'</a>', $wdf->format_currency('',$transaction['gross']), esc_attr($settings['donation_labels']['singular_name']), '<a href="'.wdf_get_funder_page('',$post_id).'">'.get_the_title($post_id).'</a>' ),
+                            'primary_link' => wdf_get_funder_page('',$post_id),
+                            'type' => 'pledge'
+                        );
+                        $activity_args = apply_filters('wdf_bp_activity_args',$activity_args);
+                        bp_wdf_record_activity($activity_args);
 
-					unset($_SESSION['wdf_bp_activity']);
-				}
-			}
+                        unset($_SESSION['wdf_bp_activity']);
+                    }
+                }
 
-			$content .= wdf_thanks_panel( false, $post_id, $transaction );
+                $content .= wdf_thanks_panel( false, $post_id, $transaction );
 
-			if(isset($_SESSION['wdf_gateway'])) {
-				// The gateway can use this filter to provide any transactional details that you need to display
-				$content .= '<div class="wdf_gateway_payment_info">'.apply_filters('wdf_gateway_payment_info_'.$_SESSION['wdf_gateway'], '', $transaction).'</div>';
-			}
-		} else {
-			$message_waiting = sprintf( __('Wir warten auf Deine Zahlung','wdf'), esc_attr($settings['donation_labels']['singular_name']), esc_attr($settings['donation_labels']['singular_name']) );
+                if(isset($_SESSION['wdf_gateway'])) {
+                    $content .= '<div class="wdf_gateway_payment_info">'.apply_filters('wdf_gateway_payment_info_'.$_SESSION['wdf_gateway'], '', $transaction).'</div>';
+                }
+            } else {
+                $message_waiting = sprintf( __('Wir warten auf Deine Zahlung','wdf'), esc_attr($settings['donation_labels']['singular_name']), esc_attr($settings['donation_labels']['singular_name']) );
 
-			$message = (isset($settings['message_pledge_not_found']) && $settings['message_pledge_not_found']) ? $settings['message_pledge_not_found'] : sprintf( __('Oh No, we can\'t find your %s.  Sometimes it take little bit longer for your %s to be logged.','wdf'), esc_attr($settings['donation_labels']['singular_name']), esc_attr($settings['donation_labels']['singular_name']) );
-			if((!isset($settings['message_pledge_not_found']) || !$settings['message_pledge_not_found']) && get_post_meta($post_id,'wdf_send_email',true)) {
-				$message .= ' '.__('In diesem Fall senden wir Dir eine E-Mail').'.';
-			}
-			$content .= '<p class="wdf-pledge-waiting" data-wdf-pledge-id="'.$pledge_id.'">'.$message_waiting.'<span class="wdf-loading-dots"></span></p>';
-			$content .= '<p class="error wdf-pledge-error" style="display: none;">'.$message.'</p>';
-		}
-		$content .= '</div>';
+                $message = (isset($settings['message_pledge_not_found']) && $settings['message_pledge_not_found']) ? $settings['message_pledge_not_found'] : sprintf( __('Oh No, we can\'t find your %s.  Sometimes it take little bit longer for your %s to be logged.','wdf'), esc_attr($settings['donation_labels']['singular_name']), esc_attr($settings['donation_labels']['singular_name']) );
+                if((!isset($settings['message_pledge_not_found']) || !$settings['message_pledge_not_found']) && get_post_meta($post_id,'wdf_send_email',true)) {
+                    $message .= ' '.__('In diesem Fall senden wir Dir eine E-Mail').'.';
+                }
+                $content .= '<p class="wdf-pledge-waiting" data-wdf-pledge-id="'.$pledge_id.'">'.$message_waiting.'<span class="wdf-loading-dots"></span></p>';
+                $content .= '<p class="error wdf-pledge-error" style="display: none;">'.$message.'</p>';
+            }
+        }
+        $content .= '</div>';
 
-		//Unset all the session information
-		$wdf->clear_session();
+        //Unset all the session information
+        $wdf->clear_session();
 
-		if($echo) {echo $content;} else {return $content;}
-	}
+        if($echo) {echo $content;} else {return $content;}
+    }
 }
 
 if(!function_exists('wdf_thanks_panel')) {

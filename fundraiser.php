@@ -894,6 +894,7 @@ function _vars() {
 		if( isset($_POST['funder_id']) && !empty($_POST['funder_id']) ) {
 			$_SESSION['funder_id'] = $_POST['funder_id'];
 			$_SESSION['wdf_type'] = $this->get_payment_type($_POST['funder_id']);
+			$_SESSION['wdf_pledge_post_id'] = $_POST['funder_id'];
 		}
 		if( isset($_POST['wdf_pledge']) && !empty($_POST['wdf_pledge']) )
 			$_SESSION['wdf_pledge'] = $this->filter_price($_POST['wdf_pledge']);
@@ -961,16 +962,23 @@ function _vars() {
 		}
 	}
 	function look_for_pledge() {
-		if(!isset($_REQUEST['pledge_id']) || !$_REQUEST['pledge_id']) {
+		if (!isset($_REQUEST['pledge_id']) || !$_REQUEST['pledge_id']) {
 			echo 'not-found';
 			exit();
 		}
 
-		$pledge = get_page_by_title( $_REQUEST['pledge_id'], null, 'donation' );
-		if($pledge)
-			echo $pledge->ID;
-		else
+		$query = new WP_Query([
+			'post_type'      => 'donation',
+			'title'          => sanitize_text_field($_REQUEST['pledge_id']),
+			'post_status'    => 'any',
+			'posts_per_page' => 1,
+			'fields'         => 'ids',
+		]);
+		if (!empty($query->posts)) {
+			echo $query->posts[0];
+		} else {
 			echo 'not-found';
+		}
 		exit();
 	}
 	function process_complete_funder( $funder_id = false ) {
