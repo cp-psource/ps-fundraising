@@ -827,7 +827,7 @@ if(!function_exists('wdf_pledge_button')) {
 				<span class="wdf_recurring_holder">
 				<label class="wdf_recurring_label">'.__('Mache diese Spende','wdf').' </label>
 				<select class="wdf_recurring_select" name="wdf_recurring">
-					<option value="0">'.__('Einmal','wdf').'</option>
+					<option value="0">'.__('Einmalig','wdf').'</option>
 					<option value="D">'.__('Täglich','wdf').'</option>
 					<option value="W">'.__('Wöchentlich','wdf').'</option>
 					<option value="M">'.__('Monatlich','wdf').'</option>
@@ -843,6 +843,31 @@ if(!function_exists('wdf_pledge_button')) {
 			if(defined('WDF_BP_INSTALLED') && WDF_BP_INSTALLED == true && is_user_logged_in())
 					$content .= '<label class="wdf_bp_show_on_activity">'.__('Veröffentliche in deinem Profil','wdf').'<input type="checkbox" name="wdf_bp_activity" value="1" checked="checked" /></label>';
 			$content .= '<input class="wdf_send_donation" type="submit" name="wdf_send_donation" value="'.$pledge_label.'" />';
+
+			// Stripe: Recurring-Option ausblenden und auf "Einmal" setzen
+			$content .= '
+			<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				function checkGateway() {
+					var gateway = document.querySelector("input[name=wdf_gateway]:checked");
+					var recurringHolder = document.querySelector(".wdf_recurring_holder");
+					var recurringSelect = document.querySelector("select[name=wdf_recurring]");
+					if(gateway && gateway.value === "stripe") {
+						if(recurringHolder) recurringHolder.style.display = "none";
+						if(recurringSelect) recurringSelect.value = "0";
+					} else {
+						if(recurringHolder) recurringHolder.style.display = "";
+					}
+				}
+				// Bei Gateway-Wechsel prüfen
+				document.querySelectorAll("input[name=wdf_gateway]").forEach(function(el){
+					el.addEventListener("change", checkGateway);
+				});
+				// Beim Laden prüfen
+				checkGateway();
+			});
+			</script>
+			';
 		}
 
 		$content = apply_filters('wdf_pledge_button', $content, $post_id);
