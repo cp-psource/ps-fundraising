@@ -1,10 +1,9 @@
 === PS Fundraising ===
 Contributors: DerN3rd (PSOURCE)
-Donate link: https://n3rds.work/spendenaktionen/unterstuetze-unsere-psource-free-werke/
 Tags: fundraising, spenden, crowdfunding
 Requires at least: 3.0
 Tested up to: 5.6.1
-Stable tag: 2.7.6
+Stable tag: 2.7.7
 License: GPLv2 or later
 
 Fundraising ist unsere Weiterentwicklung des von WPMUDEV eingestellten Fundraising-Plugins.
@@ -29,21 +28,6 @@ Vergiss die unverschämten Gebühren und stecke die Gelder stattdessen direkt in
 Wenn Du nach einem leistungsstarken Fundraising-System mit Tausenden von Einstellungen suchst, ist dies nicht der Fall. 
 Andere Plugins können das. 
 Fundraising fügt nur die Power-Features für einfaches Crowdfunding und schnelles Setup hinzu.
-
-[POWERED BY PSOURCE](https://n3rds.work/psource_kategorien/psource-plugins/)
-
-=== Hilfe und Support ===
-
-[Projektseite](https://n3rds.work/piestingtal_source/ps-fundraising/)
-[GitHub](https://github.com/piestingtal-source/ps-fundraising)
-
-== Mehr PSOURCE ==
-
-= Finde mehr Piestingtal.Source =
-
-Wirf einen Blick in unser [PSOURCE Sortiment](https://n3rds.work/psource_kategorien/psource-plugins/) und hole noch mehr aus Deinem WordPress/ClassicPress!
-
-Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswork-digalize-das-piestingtal/newsletter-management/) über unsere Piestingtal.Source informiert!
 
 == Entwickler ==
 
@@ -103,18 +87,11 @@ function my_custom_filter_style_name($name, $file_name) {
 	return $name;
 }
 
-== Hilf uns ==
-
-Viele, viele Kaffees konsumieren wir während wir an unseren Plugins und Themes arbeiten.
-Wie wärs? Möchtest Du uns mit einer Kaffee-Spende bei der Arbeit an unseren Plugins unterstützen?
-
-= Unterstütze uns =
-
-Mach eine [Spende per Überweisung oder PayPal](https://n3rds.work/spendenaktionen/unterstuetze-unsere-psource-free-werke/) wir Danken Dir!
-
-Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswork-digalize-das-piestingtal/newsletter-management/) über unsere Piestingtal.Source informiert!
-
 == Changelog ==
+
+= 2.7.7 =
+
+* Neu: Stripe-Gateway
 
 = 2.7.6 =
 

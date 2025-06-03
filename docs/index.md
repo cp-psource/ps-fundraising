@@ -13,7 +13,6 @@ title: "PS Fundraising"
 **Erstelle Spendenbuttons, komplexe Crowdfundingkampagnen oder lasse Deine Besucher Deine Projekte unterstützen.**
 
 ## Crowdfunding für Dein nächstes Projekt mit Finanzierungszielen und Belohnungspaketen oder Erstellen einer einzelnen Spendenseite mit wiederkehrenden Zahlungsoptionen.
-----------------------------------------------------------------------------------------------------------------------------------------------------
 
 ![fundit-home-735x470](https://n3rds.work/wp-content/uploads/2023/10/fundraising-home-735x470-583x372.png) 
 

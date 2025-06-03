@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: PS Fundraising
-Plugin URI: https://n3rds.work/piestingtal_source/ps-fundraising/
+Plugin URI: https://cp-psource.github.io/ps-fundraising/
 Description: Erstelle eine Spendenseite für jeden Zweck oder jedes Projekt.
-Version: 2.7.6
+Version: 2.7.7
 Text Domain: wdf
 Author: PSOURCE
 Domain Path: /languages
@@ -105,7 +105,7 @@ class WDF {
 	private $currencies;
 
 function _vars() {
-    $this->version = '2.7.6';
+    $this->version = '2.7.7';
     $this->defaults = array(
         'currency' => 'EUR',
         'dir_slug' => 'spendenaktionen',
