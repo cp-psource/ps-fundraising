@@ -60,6 +60,39 @@ if (!class_exists('WDF_Gateway_Stripe')) {
                         <?php echo $tips->add_tip(__('Das Webhook Secret aus deinem Stripe Dashboard für die Webhook-Überprüfung.', 'wdf')); ?>
                     </td>
                 </tr>
+                <tr valign="top">
+                    <th scope="row"><?php _e('Erlaubte Stripe-Zahlarten', 'wdf'); ?></th>
+                    <td>
+                        <?php
+                        $all_methods = [
+                            'card' => 'Kreditkarte (Visa, Mastercard, Amex, ...)',
+                            'sepa_debit' => 'SEPA-Lastschrift',
+                            'sofort' => 'SOFORT',
+                            'giropay' => 'giropay',
+                            'bancontact' => 'Bancontact',
+                            'ideal' => 'iDEAL',
+                            'eps' => 'EPS',
+                            'p24' => 'Przelewy24',
+                            'alipay' => 'Alipay',
+                            'wechat_pay' => 'WeChat Pay',
+                            'paypal' => 'PayPal (Beta, ggf. nicht überall verfügbar)',
+                            // Weitere Methoden nach Bedarf ergänzen
+                        ];
+                        $enabled = isset($settings['stripe']['methods']) ? (array)$settings['stripe']['methods'] : ['card'];
+                        foreach ($all_methods as $key => $label) {
+                            ?>
+                            <label style="display:block;">
+                                <input type="checkbox" name="wdf_settings[stripe][methods][]" value="<?php echo esc_attr($key); ?>" <?php checked(in_array($key, $enabled)); ?> />
+                                <?php echo esc_html($label); ?>
+                            </label>
+                            <?php
+                        }
+                        ?>
+                        <span class="description">
+                            <?php _e('Nur aktivierte Methoden im Stripe Dashboard funktionieren. <a href="https://dashboard.stripe.com/settings/payment_methods" target="_blank">Hier aktivieren &rarr;</a>', 'wdf'); ?>
+                        </span>
+                    </td>
+                </tr>
                 </tbody>
             </table>
             <?php
@@ -187,8 +220,9 @@ function wdf_stripe_create_session() {
     $cancel_url  = add_query_arg('wdf_stripe_cancel', 1, wdf_get_funder_page('checkout', $post_id));
 
     // HIER: Session-Array bauen!
+    $methods = isset($settings['stripe']['methods']) && is_array($settings['stripe']['methods']) ? $settings['stripe']['methods'] : ['card'];
     $session_args = [
-        'payment_method_types' => ['card'],
+        'payment_method_types' => $methods,
         'line_items' => [[
             'price_data' => [
                 'currency' => $currency,
