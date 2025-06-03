@@ -2445,7 +2445,7 @@ msgid "Erstelle eine Spendenseite für jeden Zweck oder jedes Projekt."
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "WMS N@W"
+msgid "PSOURCE"
 msgstr ""
 
 #. Author URI of the plugin/theme

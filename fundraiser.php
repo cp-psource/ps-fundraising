@@ -5,12 +5,12 @@ Plugin URI: https://n3rds.work/piestingtal_source/ps-fundraising/
 Description: Erstelle eine Spendenseite für jeden Zweck oder jedes Projekt.
 Version: 2.7.6
 Text Domain: wdf
-Author: WMS N@W
+Author: PSOURCE
 Domain Path: /languages
-Author URI: https://n3rds.work
+Author URI: https://nerdservice-eimen.net
 
 
-Copyright 2020-2023 DerN3rd (https://n3rds.work)
+Copyright 2020-2025 DerN3rd (https://nerdservice-eimen.net)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License (Version 2 - GPLv2) as published by
@@ -26,14 +26,24 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-require 'psource/psource-plugin-update/psource-plugin-updater.php';
-use Psource\PluginUpdateChecker\v5\PucFactory;
-$MyUpdateChecker = PucFactory::buildUpdateChecker(
-	'https://n3rds.work//wp-update-server/?action=get_metadata&slug=ps-fundraising', 
-	__FILE__, 
-	'ps-fundraising' 
+/**
+ * @@@@@@@@@@@@@@@@@ PS UPDATER 1.3 @@@@@@@@@@@
+ **/
+require 'psource/psource-plugin-update/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+ 
+$myUpdateChecker = PucFactory::buildUpdateChecker(
+	'https://github.com/cp-psource/ps-fundraising',
+	__FILE__,
+	'ps-fundraising'
 );
+ 
+//Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('master');
 
+/**
+ * @@@@@@@@@@@@@@@@@ ENDE PS UPDATER 1.3 @@@@@@@@@@@
+ **/
 
 define ('WDF_PLUGIN_SELF_DIRNAME', basename(dirname(__FILE__)));
 

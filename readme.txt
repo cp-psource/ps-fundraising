@@ -1,5 +1,5 @@
 === PS Fundraising ===
-Contributors: DerN3rd (WMS N@W)
+Contributors: DerN3rd (PSOURCE)
 Donate link: https://n3rds.work/spendenaktionen/unterstuetze-unsere-psource-free-werke/
 Tags: fundraising, spenden, crowdfunding
 Requires at least: 3.0
