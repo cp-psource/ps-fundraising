@@ -43,7 +43,7 @@ if(!class_exists('WDF_Gateway_PayPal')) {
 		}
 
 		function on_creation() {
-			$this->public_name = $this->admin_name = __('PayPal','wdf');
+			$this->public_name = $this->admin_name = 'PayPal';
 
 			if(isset($_SESSION['funder_id'])) {
 				$collect_address = get_post_meta($_SESSION['funder_id'],'wdf_collect_address', true);
