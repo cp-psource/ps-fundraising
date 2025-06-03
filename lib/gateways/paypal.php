@@ -844,6 +844,6 @@ if(!class_exists('WDF_Gateway_PayPal')) {
 		}
 
 	}
-wdf_register_gateway_plugin('WDF_Gateway_PayPal', 'paypal', __('PayPal','wdf'), array('simple','standard','advanced'));
+wdf_register_gateway_plugin('WDF_Gateway_PayPal', 'paypal', 'PayPal', array('simple','standard','advanced'));
 }
 ?>

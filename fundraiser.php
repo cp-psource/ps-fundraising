@@ -66,9 +66,12 @@ if (is_multisite() && defined('WPMU_PLUGIN_URL') && defined('WPMU_PLUGIN_DIR') &
 } else {
 	// No textdomain is loaded because we can't determine the plugin location.
 	// No point in trying to add textdomain to string and/or localizing it.
-	wp_die(__('Es gab ein Problem beim Bestimmen, wo das Fundraising-Plugin installiert ist. Bitte erneut installieren.'));
+    wp_die('Es gab ein Problem beim Bestimmen, wo das Fundraising-Plugin installiert ist. Bitte erneut installieren.');
 }
-$textdomain_handler('wdf', false, WDF_PLUGIN_SELF_DIRNAME . '/languages/');
+// Textdomain erst ab plugins_loaded laden!
+add_action('plugins_loaded', function() use ($textdomain_handler) {
+    $textdomain_handler('wdf', false, WDF_PLUGIN_SELF_DIRNAME . '/languages/');
+});
 
 define ('WDF_PLUGIN_URL', plugins_url('', __FILE__ ));
 
@@ -101,55 +104,55 @@ class WDF {
 	private $eu_countries;
 	private $currencies;
 
-	function _vars() {
-		$this->version = '2.7.6';
-		$this->defaults = array(
-			'currency' => 'EUR',
-			'dir_slug' => __('spendenaktionen','wdf'),
-			'permlinks_front' => ((function_exists('is_subdomain_install') && is_subdomain_install()) ? 0 : 1),
-			'default_gateway' => 'paypal',
-			'checkout_slug' => __('unterstuetzen','wdf'),
-			'confirm_slug' => __('danke-sehr','wdf'),
-			'activity_slug' => __('aktivitaet','wdf'),
-			'inject_menu' => 'no',
-			'single_styles' => 'yes',
-			'custom_css' => '',
-			'message_pledge_not_found' => '',
-			'first_time' => 1,
-			'default_style' => 'wdf-basic',
-			'panel_in_sidebar' => 'no',
-			'payment_types' => array('simple'),
-			'curr_symbol_position' => 1,
-			'single_checkout_type' => 0,
-			'curr_decimal' => 1,
-			'default_email' => __('Vielen Dank für Deine Unterstützung. Deine Spende von %DONATIONTOTAL% wurde erhalten und wird sehr geschätzt. Danke für Deine Unterstützung.','wdf'),
-			'current_version' => $this->version,
-			'checkout_type' => '1',
-			'funder_labels' => array(
-				'menu_name' => __('Spendensammlung','wdf'),
-				'singular_name' => __('Spendenaktion','wdf'),
-				'plural_name' => __('Spendenaktionen','wdf'),
-				'singular_level' => __('Belohnung','wdf'),
-				'plural_level' => __('Belohnungen','wdf')
-			),
-			'donation_labels' => array(
-				'backer_single' => __('Unterstützer','wdf'),
-				'backer_plural' => __('Unterstützer','wdf'),
-				'singular_name' => __('Unterstützung','wdf'),
-				'plural_name' => __('Unterstützungen','wdf'),
-				'action_name' => __('Unterstütze dieses Projekt','wdf')
-			)
-		);
-		$this->capabilities = array(
-			'wdf_add_fundraisers' => __('Hinzufügen und Verwalten von Spendenaktionen für Benutzer','wdf'),
-			'wdf_manage_all_fundraisers' => __('Verwalte alle Spendenaktionen','wdf'),
-			'wdf_manage_pledges' => __('Unterstützungen verwalten','wdf'),
-			'wdf_edit_settings' => __('Einstellungen bearbeiten','wdf'),
-		);
+function _vars() {
+    $this->version = '2.7.6';
+    $this->defaults = array(
+        'currency' => 'EUR',
+        'dir_slug' => 'spendenaktionen',
+        'permlinks_front' => ((function_exists('is_subdomain_install') && is_subdomain_install()) ? 0 : 1),
+        'default_gateway' => 'paypal',
+        'checkout_slug' => 'unterstuetzen',
+        'confirm_slug' => 'danke-sehr',
+        'activity_slug' => 'aktivitaet',
+        'inject_menu' => 'no',
+        'single_styles' => 'yes',
+        'custom_css' => '',
+        'message_pledge_not_found' => '',
+        'first_time' => 1,
+        'default_style' => 'wdf-basic',
+        'panel_in_sidebar' => 'no',
+        'payment_types' => array('simple'),
+        'curr_symbol_position' => 1,
+        'single_checkout_type' => 0,
+        'curr_decimal' => 1,
+        'default_email' => 'Vielen Dank für Deine Unterstützung. Deine Spende von %DONATIONTOTAL% wurde erhalten und wird sehr geschätzt. Danke für Deine Unterstützung.',
+        'current_version' => $this->version,
+        'checkout_type' => '1',
+        'funder_labels' => array(
+            'menu_name' => 'Fundraising',
+            'singular_name' => 'Spendenaktion',
+            'plural_name' => 'Spendenaktionen',
+            'singular_level' => 'Belohnung',
+            'plural_level' => 'Belohnungen'
+        ),
+        'donation_labels' => array(
+            'backer_single' => 'Unterstützer',
+            'backer_plural' => 'Unterstützer',
+            'singular_name' => 'Unterstützung',
+            'plural_name' => 'Unterstützungen',
+            'action_name' => 'Unterstütze dieses Projekt'
+        )
+    );
+    $this->capabilities = array(
+        'wdf_add_fundraisers' => 'Hinzufügen und Verwalten von Spendenaktionen für Benutzer',
+        'wdf_manage_all_fundraisers' => 'Verwalte alle Spendenaktionen',
+        'wdf_manage_pledges' => 'Unterstützungen verwalten',
+        'wdf_edit_settings' => 'Einstellungen bearbeiten',
+    );
 
-		// Setup Additional Data Structure
-		require_once(WDF_PLUGIN_BASE_DIR . '/lib/wdf_data.php');
-	}
+    // Setup Additional Data Structure
+    require_once(WDF_PLUGIN_BASE_DIR . '/lib/wdf_data.php');
+}
 	function __construct() {
 		$this->_vars();
 
@@ -686,7 +689,7 @@ class WDF {
 		$this->load_gateway_plugins();
 
 		// Load up our available styles
-		$this->load_styles();
+		add_action('after_setup_theme', array($this, 'load_styles'));
 
 	}
 	function load_gateway_plugins() {
@@ -2275,4 +2278,21 @@ $wdf = new WDF();
 // Check for BuddyPress and boot up our component structure
 if (defined('BP_VERSION') && version_compare( BP_VERSION, '1.5', '>' ) )
 	require_once( WDF_PLUGIN_BASE_DIR . '/fundraiser-bp.php' );
+
+if (false) {
+    __('Vielen Dank für Deine Unterstützung. Deine Spende von %DONATIONTOTAL% wurde erhalten und wird sehr geschätzt. Danke für Deine Unterstützung.', 'wdf');
+    __('Fundraising', 'wdf');
+    __('Spendenaktion', 'wdf');
+    __('Spendenaktionen', 'wdf');
+    __('Belohnung', 'wdf');
+    __('Belohnungen', 'wdf');
+    __('Unterstützer', 'wdf');
+    __('Unterstützung', 'wdf');
+    __('Unterstützungen', 'wdf');
+    __('Unterstütze dieses Projekt', 'wdf');
+    __('Hinzufügen und Verwalten von Spendenaktionen für Benutzer', 'wdf');
+	__('Verwalte alle Spendenaktionen', 'wdf');
+	__('Unterstützungen verwalten', 'wdf');
+	__('Einstellungen bearbeiten', 'wdf');
+}
 ?>

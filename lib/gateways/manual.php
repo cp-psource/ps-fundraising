@@ -196,6 +196,6 @@ if(!class_exists('WDF_Gateway_Manual')) {
 		}
 
 	}
-wdf_register_gateway_plugin('WDF_Gateway_Manual', 'manual', __('Überweisung','wdf'), array('simple','standard','advanced'));
+wdf_register_gateway_plugin('WDF_Gateway_Manual', 'manual', 'Überweisung', array('simple','standard','advanced'));
 }
 ?>
