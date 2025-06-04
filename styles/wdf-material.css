@@ -105,6 +105,83 @@
 /* Gesamtzahl der Unterstützer und gesammelte Spenden nebeneinander anordnen */
 .wdf-material .wdf_total_backers, .wdf-material .wdf_amount_raised {
     display: flex;
-    justify-content: space-between;
+    gap: 8px; /* oder ein Wert nach Geschmack */
+    justify-content: flex-start;
     align-items: center;
+}
+/* Unterstützer & Betrag nebeneinander, Zahl vor Text */
+.wdf-material .wdf_total_backers,
+.wdf-material .wdf_amount_raised {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 0.5em;
+}
+.wdf-material .wdf_big_num {
+    font-size: 2em;
+    font-weight: bold;
+    margin-right: 0.3em;
+}
+.wdf-material .wdf_total_backers .wdf_big_num,
+.wdf-material .wdf_amount_raised .wdf_big_num {
+    order: -1; /* Zahl zuerst */
+}
+
+/* Währungssymbol im Input */
+.wdf-material .wdf_pledge_amount_wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.wdf-material .wdf_pledge_amount_wrapper .wdf_currency {
+    position: absolute;
+    left: 12px;
+    font-size: 1.1em;
+    color: #888;
+    pointer-events: none;
+}
+.wdf-material input.wdf_pledge_amount {
+    padding-left: 2em; /* Platz für Symbol */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Spendenbetrag-Beschriftung und Input nebeneinander */
+.wdf-material .wdf_pledge_label_input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1em;
+}
+.wdf-material .wdf_pledge_label_input label {
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+/* Zahlungsarten nebeneinander */
+.wdf-material .wdf_payment_methods {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 1em;
+}
+.wdf-material .wdf_payment_methods label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 0;
+}
+
+/* Buttons nebeneinander */
+.wdf-material .wdf_send_donation,
+.wdf-material .wdf_button {
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+
+/* Einmalig/Monatlich Auswahl nebeneinander */
+.wdf-material .wdf_recurring_options {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 1em;
 }

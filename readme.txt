@@ -89,6 +89,11 @@ function my_custom_filter_style_name($name, $file_name) {
 
 == Changelog ==
 
+= 2.7.8 =
+
+* Frische neue styles
+* Widgets fit für WP 6
+
 = 2.7.7 =
 
 * Neu: Stripe-Gateway

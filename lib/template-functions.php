@@ -833,10 +833,18 @@ if(!function_exists('wdf_pledge_button')) {
 			//Default Button Display
 			$content .= '<input type="hidden" name="funder_id" value="'.$post_id.'" />';
 			$content .= '<input type="hidden" name="send_nonce" value="'.wp_create_nonce('send_nonce_'.$post_id).'" />';
-			$content .= '<div class="wdf_custom_donation_label">'.apply_filters('wdf_choose_amount_label',__('Wähle einen Betrag','wdf')).'</div>';
-			$content .= ($settings['curr_symbol_position'] == 1 || $settings['curr_symbol_position'] == 2 ? '<span class="currency">'.$wdf->format_currency().' </span>' : '');
-			$content .= '<input type="text" name="wdf_pledge" class="wdf_pledge_amount" value="" /> ';
-			$content .= ($settings['curr_symbol_position'] == 3 || $settings['curr_symbol_position'] == 4 ? '<span class="currency">'.$wdf->format_currency().' </span>' : '');
+			$content .= '
+<div class="wdf_pledge_label_input">
+    <label class="wdf_custom_donation_label" for="wdf_pledge_'.$post_id.'">'
+        .apply_filters('wdf_choose_amount_label',__('Wähle einen Betrag','wdf')).
+    '</label>
+    <div class="wdf_pledge_amount_wrapper">
+        '.(($settings['curr_symbol_position'] == 1 || $settings['curr_symbol_position'] == 2) ? '<span class="wdf_currency">'.$wdf->format_currency().'</span>' : '').'
+        <input type="text" id="wdf_pledge_'.$post_id.'" name="wdf_pledge" class="wdf_pledge_amount" value="" />
+        '.(($settings['curr_symbol_position'] == 3 || $settings['curr_symbol_position'] == 4) ? '<span class="wdf_currency">'.$wdf->format_currency().'</span>' : '').'
+    </div>
+</div>
+';
 
 			if(isset($meta['wdf_recurring'][0]) && $meta['wdf_recurring'][0] == 'yes' && isset($meta['wdf_type'][0]) && $meta['wdf_type'][0] == 'simple' && $settings['active_gateways']['paypal']) {
 				$content .= '

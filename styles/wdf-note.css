@@ -165,3 +165,122 @@
 .wdf-note .wdf_reward_limit_gone {
     background: #f7d4d4;
 }
+
+/* Modernes, notiziges Layout für Unterstützer und Betrag */
+.wdf-note .wdf_total_backers,
+.wdf-note .wdf_amount_raised {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 0.5em;
+    background: #fffde4;
+    border-radius: 6px;
+    padding: 4px 10px;
+    box-shadow: 0 1px 2px #efef1a33;
+}
+.wdf-note .wdf_total_backers p,
+.wdf-note .wdf_amount_raised p {
+    margin: 0;
+    align-self: flex-end;
+    font-size: 1em;
+    color: #b3a600;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+    letter-spacing: 0.02em;
+}
+
+/* Spendenbetrag-Beschriftung und Input nebeneinander */
+.wdf-note .wdf_pledge_label_input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1em;
+    background: #fffde4;
+    border-left: 4px solid #efef1a;
+    border-radius: 4px;
+    padding: 6px 10px;
+    box-shadow: 0 1px 2px #efef1a22;
+}
+.wdf-note .wdf_pledge_label_input label {
+    margin-bottom: 0;
+    font-weight: 600;
+    color: #b3a600;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+    font-size: 1.05em;
+}
+
+/* Währungssymbol im Input */
+.wdf-note .wdf_pledge_amount_wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.wdf-note .wdf_pledge_amount_wrapper .wdf_currency {
+    position: absolute;
+    left: 12px;
+    font-size: 1.1em;
+    color: #b3a600;
+    pointer-events: none;
+    opacity: 0.9;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+}
+.wdf-note input.wdf_pledge_amount {
+    padding-left: 2em;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px dashed #efef1a;
+    border-radius: 4px;
+    background: #fffde4;
+    color: #b3a600;
+    font-size: 1.1em;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+.wdf-note input.wdf_pledge_amount:focus {
+    border: 1.5px solid #efef1a;
+    box-shadow: 0 0 6px #efef1a55;
+    outline: none;
+}
+
+/* Zahlungsarten nebeneinander */
+.wdf-note .wdf_payment_methods {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 1em;
+}
+.wdf-note .wdf_payment_methods label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 0;
+    color: #b3a600;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+}
+
+/* Buttons nebeneinander, sticky */
+.wdf-note .wdf_send_donation,
+.wdf-note .wdf_button {
+    margin-right: 10px;
+    margin-bottom: 0;
+    background: #efef1a;
+    color: #444;
+    border: 1px dashed #b3a600;
+    border-radius: 4px;
+    font-weight: bold;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+    box-shadow: 0 2px 4px #efef1a33;
+    transition: background 0.2s, color 0.2s;
+}
+.wdf-note .wdf_send_donation:hover,
+.wdf-note .wdf_button:hover {
+    background: #fffde4;
+    color: #b3a600;
+    border: 1.5px solid #b3a600;
+}
+
+/* Einmalig/Monatlich Auswahl nebeneinander */
+.wdf-note .wdf_recurring_options {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 1em;
+}

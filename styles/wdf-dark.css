@@ -169,3 +169,104 @@
 .wdf-dark .wdf_reward_limit_gone {
     background: #7c2b2b;
 }
+
+/* Modernes Layout für Unterstützer und Betrag im Dark-Design */
+.wdf-dark .wdf_total_backers,
+.wdf-dark .wdf_amount_raised {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 0.5em;
+}
+.wdf-dark .wdf_total_backers p,
+.wdf-dark .wdf_amount_raised p {
+    margin: 0;
+    align-self: flex-end;
+    color: #b0b0b0;
+    font-size: 1em;
+    letter-spacing: 0.02em;
+}
+
+/* Spendenbetrag-Beschriftung und Input nebeneinander */
+.wdf-dark .wdf_pledge_label_input {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1em;
+}
+.wdf-dark .wdf_pledge_label_input label {
+    margin-bottom: 0;
+    font-weight: 500;
+    color: #e0e0e0;
+    letter-spacing: 0.03em;
+}
+
+/* Währungssymbol im Input */
+.wdf-dark .wdf_pledge_amount_wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.wdf-dark .wdf_pledge_amount_wrapper .wdf_currency {
+    position: absolute;
+    left: 14px;
+    font-size: 1.1em;
+    color: #888;
+    pointer-events: none;
+    opacity: 0.8;
+}
+.wdf-dark input.wdf_pledge_amount {
+    padding-left: 2.2em;
+    width: 100%;
+    box-sizing: border-box;
+    background: #232228;
+    color: #e0e0e0;
+    border: 1px solid #444;
+    border-radius: 4px;
+    font-size: 1.1em;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+.wdf-dark input.wdf_pledge_amount:focus {
+    border: 1.5px solid #2196F3;
+    box-shadow: 0 0 0 2px #2196f355;
+    outline: none;
+}
+
+/* Zahlungsarten nebeneinander */
+.wdf-dark .wdf_payment_methods {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 1em;
+}
+.wdf-dark .wdf_payment_methods label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 0;
+    color: #ccc;
+}
+
+/* Buttons nebeneinander und mit Glow beim Hover */
+.wdf-dark .wdf_send_donation,
+.wdf-dark .wdf_button {
+    margin-right: 12px;
+    margin-bottom: 0;
+    background: linear-gradient(90deg, #393646 0%, #232228 100%);
+    color: #fff;
+    border: 1px solid #444;
+    box-shadow: 0 2px 8px #0004;
+    transition: box-shadow 0.2s, background 0.2s;
+}
+.wdf-dark .wdf_send_donation:hover,
+.wdf-dark .wdf_button:hover {
+    background: linear-gradient(90deg, #232228 0%, #393646 100%);
+    box-shadow: 0 0 8px #2196F3, 0 2px 8px #0006;
+}
+
+/* Einmalig/Monatlich Auswahl nebeneinander */
+.wdf-dark .wdf_recurring_options {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 1em;
+}

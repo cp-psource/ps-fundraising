@@ -155,3 +155,84 @@
 .wdf-basic .wdf_reward_limit_gone {
     background: #f7d4d4;
 }
+
+/* Modernes, schlichtes Layout für Unterstützer und Betrag im Basic-Design */
+.wdf-basic .wdf_total_backers,
+.wdf-basic .wdf_amount_raised {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 0.5em;
+}
+.wdf-basic .wdf_total_backers p,
+.wdf-basic .wdf_amount_raised p {
+    margin: 0;
+    align-self: flex-end;
+    font-size: 1em;
+    color: #444;
+}
+
+/* Spendenbetrag-Beschriftung und Input nebeneinander */
+.wdf-basic .wdf_pledge_label_input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 1em;
+}
+.wdf-basic .wdf_pledge_label_input label {
+    margin-bottom: 0;
+    font-weight: 500;
+    color: #222;
+}
+
+/* Währungssymbol im Input */
+.wdf-basic .wdf_pledge_amount_wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.wdf-basic .wdf_pledge_amount_wrapper .wdf_currency {
+    position: absolute;
+    left: 10px;
+    font-size: 1em;
+    color: #888;
+    pointer-events: none;
+}
+.wdf-basic input.wdf_pledge_amount {
+    padding-left: 2em;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    background: #fff;
+    color: #222;
+}
+
+/* Zahlungsarten nebeneinander */
+.wdf-basic .wdf_payment_methods {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 1em;
+}
+.wdf-basic .wdf_payment_methods label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 0;
+    font-size: 0.95em;
+}
+
+/* Buttons nebeneinander */
+.wdf-basic .wdf_send_donation,
+.wdf-basic .wdf_button {
+    margin-right: 8px;
+    margin-bottom: 0;
+}
+
+/* Einmalig/Monatlich Auswahl nebeneinander */
+.wdf-basic .wdf_recurring_options {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 1em;
+}

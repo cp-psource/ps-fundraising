@@ -131,3 +131,98 @@
 .wdf-minimal .wdf_reward_limit_gone {
     background: #f7d4d4;
 }
+
+/* Modernes, minimalistisches Layout für Unterstützer und Betrag */
+.wdf-minimal .wdf_total_backers,
+.wdf-minimal .wdf_amount_raised {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 0.5em;
+}
+.wdf-minimal .wdf_total_backers p,
+.wdf-minimal .wdf_amount_raised p {
+    margin: 0;
+    align-self: flex-end;
+    font-size: 1em;
+    color: #444;
+    letter-spacing: 0.01em;
+}
+
+/* Spendenbetrag-Beschriftung und Input nebeneinander */
+.wdf-minimal .wdf_pledge_label_input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 1em;
+}
+.wdf-minimal .wdf_pledge_label_input label {
+    margin-bottom: 0;
+    font-weight: 400;
+    color: #222;
+    font-size: 1em;
+}
+
+/* Währungssymbol im Input */
+.wdf-minimal .wdf_pledge_amount_wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.wdf-minimal .wdf_pledge_amount_wrapper .wdf_currency {
+    position: absolute;
+    left: 10px;
+    font-size: 1em;
+    color: #aaa;
+    pointer-events: none;
+}
+.wdf-minimal input.wdf_pledge_amount {
+    padding-left: 2em;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background: #fafafa;
+    color: #222;
+    font-size: 1em;
+}
+
+/* Zahlungsarten nebeneinander */
+.wdf-minimal .wdf_payment_methods {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1em;
+}
+.wdf-minimal .wdf_payment_methods label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 0;
+    font-size: 0.95em;
+    color: #555;
+}
+
+/* Buttons nebeneinander */
+.wdf-minimal .wdf_send_donation,
+.wdf-minimal .wdf_button {
+    margin-right: 8px;
+    margin-bottom: 0;
+    background: #eaeaea;
+    color: #222;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    transition: background 0.2s, border 0.2s;
+}
+.wdf-minimal .wdf_send_donation:hover,
+.wdf-minimal .wdf_button:hover {
+    background: #f5f5f5;
+    border: 1px solid #888;
+}
+
+/* Einmalig/Monatlich Auswahl nebeneinander */
+.wdf-minimal .wdf_recurring_options {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1em;
+}
