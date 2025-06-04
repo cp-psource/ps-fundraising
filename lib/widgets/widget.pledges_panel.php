@@ -22,6 +22,17 @@ class WDF_Pledges_Panel extends WP_Widget {
 		// Widget output
 		global $wp_query, $wdf;
 
+	    // Standardwerte setzen
+		$defaults = array(
+			'title' => '',
+			'number_pledges' => '',
+			'style' => '',
+			'single_fundraiser' => '0',
+			'funder' => '',
+			'sort_type' => ''
+		);
+		$instance = wp_parse_args( $instance, $defaults );
+
 		if($instance['single_fundraiser'] == '1') {
 			$donations = $wdf->get_pledge_list($instance['funder']);
 			if($donations) {
@@ -36,7 +47,12 @@ class WDF_Pledges_Panel extends WP_Widget {
 				echo $content;
 			}
 		} else {
-			if($wp_query->query_vars['post_type'] == 'funder' && $wp_query->is_single && (!isset($wp_query->query_vars['funder_checkout']) || $wp_query->query_vars['funder_checkout'] != '1') && (!isset($wp_query->query_vars['funder_confirm']) || $wp_query->query_vars['funder_confirm'] != '1') ) {
+			if(
+				isset($wp_query->query_vars['post_type']) && $wp_query->query_vars['post_type'] == 'funder'
+				&& $wp_query->is_single
+				&& (!isset($wp_query->query_vars['funder_checkout']) || $wp_query->query_vars['funder_checkout'] != '1')
+				&& (!isset($wp_query->query_vars['funder_confirm']) || $wp_query->query_vars['funder_confirm'] != '1')
+			) {
 				$donations = $wdf->get_pledge_list($wp_query->posts[0]->ID);
 				if($donations) {
 					// Single Fundraiser Page

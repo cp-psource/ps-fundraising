@@ -19,6 +19,15 @@ class WDF_Fundraisers_List extends WP_Widget {
 	}
 
 	function widget( $args, $instance ) {
+		// Standardwerte setzen
+		$defaults = array(
+			'title' => __('Empfohlene Spendenaktionen','wdf'),
+			'description' => '',
+			'limit' => '',
+			'funders' => array()
+		);
+		$instance = wp_parse_args( $instance, $defaults );
+
 		$limit = (isset($instance['limit']) && $instance['limit'] && is_numeric($instance['limit'])) ? $instance['limit'] : -1;
 		// Widget output
 		$content = $args['before_widget'];
@@ -56,6 +65,13 @@ class WDF_Fundraisers_List extends WP_Widget {
 
 	function form( $instance ) {
 		$settings = get_option('wdf_settings');
+		$defaults = array(
+			'title' => __('Empfohlene Spendenaktionen','wdf'),
+			'description' => '',
+			'limit' => '',
+			'funders' => array()
+		);
+		$instance = wp_parse_args( $instance, $defaults );
 		?>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php echo __('Titel','wdf') ?></label><br />

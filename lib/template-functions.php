@@ -60,7 +60,14 @@ if(!function_exists('wdf_fundraiser_panel')) {
 
 		$settings = get_option('wdf_settings');
 		$content = '';
-		$post_id = (empty($post_id) ? $post->ID : $post_id );
+		if (empty($post_id)) {
+			global $post;
+			if (isset($post) && is_object($post) && isset($post->ID)) {
+				$post_id = $post->ID;
+			} else {
+				return false; // Kein Post verfügbar, Funktion abbrechen
+			}
+		}
 		$funder = get_post($post_id);
 		if(!$funder)
 			return false;
@@ -304,7 +311,8 @@ if(!function_exists('wdf_time_left')) {
 		$start_date = strtotime(get_post_meta($post_id, 'wdf_goal_start', true));
 		$now = current_time('timestamp');
 
-		$meta = get_post_custom($post->ID);
+		$post_id_for_meta = (isset($post) && is_object($post) && isset($post->ID)) ? $post->ID : $post_id;
+		$meta = get_post_custom($post_id_for_meta);
 
 		if($now > $end_date && isset($meta['wdf_has_goal'][0]) && $meta['wdf_has_goal'][0] == 1 ) {
 			if($active_bool === true)
@@ -715,7 +723,11 @@ if(!function_exists('wdf_get_funder_page')) {
 	function wdf_get_funder_page($context = '', $post_id = '') {
 		if(empty($post_id)) {
 			global $post;
-			$post_id = $post->ID;
+			if (isset($post) && is_object($post) && isset($post->ID)) {
+				$post_id = $post->ID;
+			} else {
+				return false; // Kein Post verfügbar, Funktion abbrechen
+			}
 		}
 		if($funder = get_post($post_id)) {
 			$settings = get_option('wdf_settings');
@@ -736,7 +748,11 @@ if(!function_exists('wdf_pledge_button')) {
 		global $wdf; $content = '';
 		if(empty($post_id)) {
 			global $post;
-			$post_id = $post->ID;
+			if (isset($post) && is_object($post) && isset($post->ID)) {
+				$post_id = $post->ID;
+			} else {
+				return false; // Kein Post verfügbar, Funktion abbrechen
+			}
 		}
 		$settings = get_option('wdf_settings');
 		$meta = get_post_custom($post_id);

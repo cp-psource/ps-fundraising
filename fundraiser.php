@@ -104,55 +104,55 @@ class WDF {
 	private $eu_countries;
 	private $currencies;
 
-function _vars() {
-    $this->version = '2.7.7';
-    $this->defaults = array(
-        'currency' => 'EUR',
-        'dir_slug' => 'spendenaktionen',
-        'permlinks_front' => ((function_exists('is_subdomain_install') && is_subdomain_install()) ? 0 : 1),
-        'default_gateway' => 'paypal',
-        'checkout_slug' => 'unterstuetzen',
-        'confirm_slug' => 'danke-sehr',
-        'activity_slug' => 'aktivitaet',
-        'inject_menu' => 'no',
-        'single_styles' => 'yes',
-        'custom_css' => '',
-        'message_pledge_not_found' => '',
-        'first_time' => 1,
-        'default_style' => 'wdf-basic',
-        'panel_in_sidebar' => 'no',
-        'payment_types' => array('simple'),
-        'curr_symbol_position' => 1,
-        'single_checkout_type' => 0,
-        'curr_decimal' => 1,
-        'default_email' => 'Vielen Dank für Deine Unterstützung. Deine Spende von %DONATIONTOTAL% wurde erhalten und wird sehr geschätzt. Danke für Deine Unterstützung.',
-        'current_version' => $this->version,
-        'checkout_type' => '1',
-        'funder_labels' => array(
-            'menu_name' => 'Fundraising',
-            'singular_name' => 'Spendenaktion',
-            'plural_name' => 'Spendenaktionen',
-            'singular_level' => 'Belohnung',
-            'plural_level' => 'Belohnungen'
-        ),
-        'donation_labels' => array(
-            'backer_single' => 'Unterstützer',
-            'backer_plural' => 'Unterstützer',
-            'singular_name' => 'Unterstützung',
-            'plural_name' => 'Unterstützungen',
-            'action_name' => 'Unterstütze dieses Projekt'
-        )
-    );
-    $this->capabilities = array(
-        'wdf_add_fundraisers' => 'Hinzufügen und Verwalten von Spendenaktionen für Benutzer',
-        'wdf_manage_all_fundraisers' => 'Verwalte alle Spendenaktionen',
-        'wdf_manage_pledges' => 'Unterstützungen verwalten',
-        'wdf_edit_settings' => 'Einstellungen bearbeiten',
-    );
+	function _vars() {
+		$this->version = '2.7.7';
+		$this->defaults = array(
+			'currency' => 'EUR',
+			'dir_slug' => 'spendenaktionen',
+			'permlinks_front' => ((function_exists('is_subdomain_install') && is_subdomain_install()) ? 0 : 1),
+			'default_gateway' => 'paypal',
+			'checkout_slug' => 'unterstuetzen',
+			'confirm_slug' => 'danke-sehr',
+			'activity_slug' => 'aktivitaet',
+			'inject_menu' => 'no',
+			'single_styles' => 'yes',
+			'custom_css' => '',
+			'message_pledge_not_found' => '',
+			'first_time' => 1,
+			'default_style' => 'wdf-basic',
+			'panel_in_sidebar' => 'no',
+			'payment_types' => array('simple'),
+			'curr_symbol_position' => 1,
+			'single_checkout_type' => 0,
+			'curr_decimal' => 1,
+			'default_email' => 'Vielen Dank für Deine Unterstützung. Deine Spende von %DONATIONTOTAL% wurde erhalten und wird sehr geschätzt. Danke für Deine Unterstützung.',
+			'current_version' => $this->version,
+			'checkout_type' => '1',
+			'funder_labels' => array(
+				'menu_name' => 'Fundraising',
+				'singular_name' => 'Spendenaktion',
+				'plural_name' => 'Spendenaktionen',
+				'singular_level' => 'Belohnung',
+				'plural_level' => 'Belohnungen'
+			),
+			'donation_labels' => array(
+				'backer_single' => 'Unterstützer',
+				'backer_plural' => 'Unterstützer',
+				'singular_name' => 'Unterstützung',
+				'plural_name' => 'Unterstützungen',
+				'action_name' => 'Unterstütze dieses Projekt'
+			)
+		);
+		$this->capabilities = array(
+			'wdf_add_fundraisers' => 'Hinzufügen und Verwalten von Spendenaktionen für Benutzer',
+			'wdf_manage_all_fundraisers' => 'Verwalte alle Spendenaktionen',
+			'wdf_manage_pledges' => 'Unterstützungen verwalten',
+			'wdf_edit_settings' => 'Einstellungen bearbeiten',
+		);
 
-    // Setup Additional Data Structure
-    require_once(WDF_PLUGIN_BASE_DIR . '/lib/wdf_data.php');
-}
+		// Setup Additional Data Structure
+		require_once(WDF_PLUGIN_BASE_DIR . '/lib/wdf_data.php');
+	}
 	function __construct() {
 		$this->_vars();
 
@@ -1402,7 +1402,7 @@ function _vars() {
 			}
 		}
 		global $wp_query;
-		if ($wp_query->query_vars['post_type'] == 'funder') {
+		if (isset($wp_query->query_vars['post_type']) && $wp_query->query_vars['post_type'] == 'funder') {
 			$funder_id = (int) $wp_query->get_queried_object_id();
 			$this->front_scripts($funder_id);
 		}
@@ -2276,6 +2276,9 @@ function _vars() {
 		} else {
 			require_once( WDF_PLUGIN_BASE_DIR . '/lib/template-functions.php');
 		}
+	}
+	public function get_styles() {
+		return $this->styles;
 	}
 }
 

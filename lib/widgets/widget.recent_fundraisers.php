@@ -19,8 +19,13 @@ class WDF_Recent_Fundraisers extends WP_Widget {
 	}
 
 	function widget( $args, $instance ) {
-		// Widget output
-		
+		// Standardwerte setzen
+		$defaults = array(
+			'title' => __('Aktuelle Spendenaktionen','wdf'),
+			'numberposts' => 5
+		);
+		$instance = wp_parse_args( $instance, $defaults );
+
 		$content = $args['before_widget'];
 		$content .= $args['before_title'] . esc_attr(apply_filters('widget_title', $instance['title'])) . $args['after_title'];
 		$query = array(

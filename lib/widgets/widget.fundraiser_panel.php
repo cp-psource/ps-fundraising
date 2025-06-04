@@ -24,6 +24,11 @@ class WDF_Fundraiser_Panel extends WP_Widget {
 		// Widget output
 		global $wp_query, $wdf;
 
+		// Standardwert setzen, falls nicht vorhanden
+		if (!isset($instance['single_fundraiser'])) {
+			$instance['single_fundraiser'] = '0';
+		}
+
 		if($instance['single_fundraiser'] == '1') {
 			// Specific Single Fundraiser
 			$wdf->front_scripts($instance['funder']);
@@ -124,11 +129,19 @@ class WDF_Fundraiser_Panel extends WP_Widget {
 	function form( $instance ) {
 		global $wdf;
 		$settings = get_option('wdf_settings');
-		
-		$instance_defaults = array( 'description', 'show_thumb', 'thumb_width', 'thumb_height', 'style', 'single_fundraiser', 'funder' );
-		foreach($instance_defaults as $instance_default)
-			if(!isset($instance[$instance_default]))
-				$instance[$instance_default] = '';
+
+		$instance_defaults = array(
+			'description' => '',
+			'show_thumb' => '0',
+			'thumb_width' => '',
+			'thumb_height' => '',
+			'style' => '',
+			'single_fundraiser' => '0',
+			'funder' => ''
+		);
+		foreach($instance_defaults as $key => $default)
+			if(!isset($instance[$key]))
+			$instance[$key] = $default;
 		?>
 
 		<p>
@@ -162,9 +175,11 @@ class WDF_Fundraiser_Panel extends WP_Widget {
 		<p>
 			<label for="<?php echo $this->get_field_id( 'style' ); ?>"><?php _e('Wähle einen Anzeigestil','wdf'); ?></label>
 			<select id="<?php echo $this->get_field_id( 'style' ); ?>" name="<?php echo $this->get_field_name('style'); ?>">
-				<?php if(is_array($wdf->styles) && !empty($wdf->styles)) : ?>
+				<?php
+				$styles = method_exists($wdf, 'get_styles') ? $wdf->get_styles() : [];
+				if(is_array($styles) && !empty($styles)) : ?>
 					<option <?php selected($instance['style'],''); ?> value=""><?php _e('Standard','wdf'); ?></option>
-					<?php foreach($wdf->styles as $key => $label) : ?>
+					<?php foreach($styles as $key => $label) : ?>
 						<option <?php selected($instance['style'],$key); ?> value="<?php echo $key ?>"><?php echo $label; ?></option>
 					<?php endforeach; ?>
 				<?php endif; ?>
