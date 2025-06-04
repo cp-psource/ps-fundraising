@@ -31,8 +31,8 @@
 						<code>[fundraiser_panel id="" style="" show_title="" show_content=""]</code>
 						<p class="attr_description">id: <span class="description"><?php _e('Die ID der Spendenaktion, die Du anzeigen möchtest','wdf'); ?></span></p>
 						<p class="attr_description">style: <span class="description"><?php _e('Ein gültiger geladener Stilname. Dies verwendet den Standard-Spendenstil, wenn kein Stil angegeben ist.','wdf'); ?></span></p>
-						<p class="attr_description">show_title: <span class="description"><?php _e('(ja/nein) Zeigt den Titel der Spendenaktion über dem Panel an','wdf'); ?></span></p>
-						<p class="attr_description">show_content: <span class="description"><?php _e('(ja/nein) Zeigt den Post-Inhalt der Spendenaktion über dem Panel an','wdf'); ?></span></p>
+						<p class="attr_description">show_title: <span class="description"><?php _e('(yes/no) Zeigt den Titel der Spendenaktion über dem Panel an','wdf'); ?></span></p>
+						<p class="attr_description">show_content: <span class="description"><?php _e('(yes/no) Zeigt den Post-Inhalt der Spendenaktion über dem Panel an','wdf'); ?></span></p>
 					</li>
 					<li>
 						<h4><strong><?php _e('Einfache Spendenschaltfläche','wdf'); ?></strong></h4>

@@ -14,7 +14,7 @@ title: "PS Fundraising"
 
 ## Crowdfunding für Dein nächstes Projekt mit Finanzierungszielen und Belohnungspaketen oder Erstellen einer einzelnen Spendenseite mit wiederkehrenden Zahlungsoptionen.
 
-![fundit-home-735x470](https://n3rds.work/wp-content/uploads/2023/10/fundraising-home-735x470-583x372.png) 
+![fundit-home-735x470](assets/images/fundraising-home-735x470-583x372.jpeg) 
 
 Erstelle, hoste und verwalte Deine Spendenaktionen und behalte alle Erlöse.
 
@@ -27,11 +27,11 @@ Bei Diensten wie Kickstarter und Indiegogo fallen Verwaltungs- und Bearbeitungsg
 
 Wenn Du nach einem leistungsstarken Fundraising-System mit Tausenden von Einstellungen suchst, ist dies nicht das Richtige. Andere Plugins können das tun. Fundraising bietet genau die leistungsstarken Funktionen für einfaches Crowdfunding und eine schnelle Einrichtung.
 
-![funding-page-735x470](https://n3rds.work/wp-content/uploads/2023/10/fundraising-page-735x470-583x372.png) 
+![funding-page-735x470](assets/images/fundraising-page-735x470-583x372.jpeg) 
 
 Alle wichtigen Funktionen zum einfachen Verwalten einer Spendenaktion auf Deiner Webseite.
 
-![fundraising-shortcode-735x470](https://n3rds.work/wp-content/uploads/2023/10/fundraising-shortcode-735x470-583x373.png) 
+![fundraising-shortcode-735x470](assets/images/fundraising-shortcode-735x470-583x373.jpeg) 
 
 Füge mit dem Shortcode-Generator schnell Fundraising-Funktionen in jeden Beitrag ein.
 
@@ -47,7 +47,7 @@ Das Fundraising umfasst zur Vereinfachung die Paypal-Integration oder ermöglich
 
 Lege ein Start- und Enddatum mit einem bestimmten Ziel fest und warte mit der Zahlung, bis das Projekt finanziert ist, oder nimm Spenden entgegen, sobald sie eingehen. Erstelle Prämienpakete und begrenze die Verfügbarkeit, um potenzielle Unterstützer zu motivieren. Fundraising macht es einfach!
 
-![fundraiser-simple-735x470](https://n3rds.work/wp-content/uploads/2023/10/fundraiser-simple-735x470-583x373.png) 
+![fundraiser-simple-735x470](assets/images/fundraiser-simple-735x470-583x373.png) 
 
 Biete Belohnungen an, um Benutzer zu einer schnellen Reaktion zu inspirieren
 
@@ -55,37 +55,37 @@ Biete Belohnungen an, um Benutzer zu einer schnellen Reaktion zu inspirieren
 
 **Erstelle eine Spendenseite für jeden Zweck oder jedes Projekt..**
 
-![fundraising-code](https://n3rds.work/wp-content/uploads/2023/10/fundraising-code.png)
+![fundraising-code](assets/images/fundraising-code.png)
 
 **Einfache Spenden**
 
 Nimm kontinuierliche Spenden ohne Enddatum entgegen. Ideal für gemeinnützige Organisationen und von Spendern unterstützte Organisationen.
 
-![crowdfund](https://n3rds.work/wp-content/uploads/2023/10/crowdfund.png)
+![crowdfund](assets/images/crowdfund.png)
 
 **Erweitertes Crowdfunding**
 
 Genehmige Zuschüsse und warte dann mit der Zahlungsabwicklung, bis Dein Ziel erreicht ist – wie bei Kickstarter.
 
-![Shortcodes](https://n3rds.work/wp-content/uploads/2023/10/shortcodes.png)
+![Shortcodes](assets/images/shortcodes.png)
 
 **Anzeigestile**
 
 Wähle einen der enthaltenen Stile (Basic, Dark, Fresh, Minimal, Note) oder erstelle einen benutzerdefinierten Stil.
 
-![Kalender](https://n3rds.work/wp-content/uploads/2023/10/calendar.png)
+![Kalender](assets/images/calendar.png)
 
 **Start- und Enddatum**
 
 Plane Dein Start- und Enddatum, um bei zeitkritischen Projekten Dringlichkeit zu schaffen.
 
-![E-Mail](https://n3rds.work/wp-content/uploads/2023/10/email.png)
+![E-Mail](assets/images/email.png)
 
 **Vielen Dank und Follow-up**
 
 Integrierte automatische Antwort-E-Mails senden Dankesnachrichten und Bestätigungs-E-Mails.
 
-![Belohnung](https://n3rds.work/wp-content/uploads/2023/10/reward.png)
+![Belohnung](assets/images/reward.png)
 
 **Belohnung**
 
@@ -97,4 +97,4 @@ Mit einem Team arbeiten? Erteile jeder Benutzerebene die Berechtigung, nur auf d
 
 ### Crowdfunding-Netzwerk
 
-Fundraising ist für die Verwendung mit WordPress, Multisite und BuddyPress konzipiert. Werde kreativ und kombiniere Fundraising mit anderen gut codierten Plugins – wie [PS Bloghosting](https://n3rds.work/piestingtal_source/ps-bloghosting-multisite-next-level-plugin/). Baue und hoste Dein eigenes fantastisches Crowdfunding-Netzwerk. Erhebe eine Prämie für die Möglichkeit, Kampagnen durchzuführen.
+Fundraising ist für die Verwendung mit WordPress, Multisite und BuddyPress konzipiert. Werde kreativ und kombiniere Fundraising mit anderen gut codierten Plugins – wie [PS Bloghosting](https://cp-psource.github.io/ps-bloghosting/). Baue und hoste Dein eigenes fantastisches Crowdfunding-Netzwerk. Erhebe eine Prämie für die Möglichkeit, Kampagnen durchzuführen.

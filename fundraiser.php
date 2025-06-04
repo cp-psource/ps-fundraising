@@ -1610,7 +1610,11 @@ class WDF {
 	}
 	function media_buttons($context) {
 		global $typenow, $pagenow, $post;
-		if($typenow != 'funder' && $typenow != 'donation' && $context == 'content' && $pagenow != 'index.php') {
+		if (
+			($typenow != 'funder' && $typenow != 'donation') &&
+			($context == 'content') &&
+			($pagenow != 'index.php')
+		) {
 			echo '<a title="'.__('Füge Fundraising-Shortcodes ein','wdf').'" class="thickbox button add_media" id="add_wdf" href="'.admin_url('media-upload.php?post_id='.$post->ID).'&tab=donate_button&TB_iframe=1&wdf=1"><img onclick="return false;" alt="'.__('Füge Fundraising-Shortcodes ein','wdf').'" src="'.WDF_PLUGIN_URL.'/img/sm_ico.png"></a>';
 		}
 	}
