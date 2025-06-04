@@ -3,7 +3,7 @@ Contributors: DerN3rd (PSOURCE)
 Tags: fundraising, spenden, crowdfunding
 Requires at least: 3.0
 Tested up to: 5.6.1
-Stable tag: 2.7.7
+Stable tag: 2.7.8
 License: GPLv2 or later
 
 Fundraising ist unsere Weiterentwicklung des von WPMUDEV eingestellten Fundraising-Plugins.
