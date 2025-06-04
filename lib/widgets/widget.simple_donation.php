@@ -20,7 +20,19 @@ class WDF_Simple_Donation extends WP_Widget {
 	}
 
 	function widget( $args, $instance ) {
-		// Widget output
+		$defaults = array(
+			'title' => '',
+			'description' => '',
+			'thankyou_msg' => '',
+			'style' => '',
+			'button_type' => 'default',
+			'button_text' => '',
+			'allow_note' => '',
+			'ref_label' => '',
+			'donation_amount' => '',
+			'paypal_email' => ''
+		);
+		$instance = wp_parse_args( (array)$instance, $defaults );
 		
 		$content = $args['before_widget'];
 		if(isset($instance['title']) && !empty($instance['title']))
@@ -40,9 +52,7 @@ class WDF_Simple_Donation extends WP_Widget {
 		$instance['style'] = esc_attr($new_instance['style']);
 		$instance['button_type'] = esc_attr($new_instance['button_type']);
 		$instance['button_text'] = esc_attr($new_instance['button_text']);
-		$instance['show_cc'] = esc_attr($new_instance['show_cc']);
 		$instance['allow_note'] = esc_attr($new_instance['allow_note']);
-		$instance['small_button'] = esc_attr($new_instance['small_button']);
 		$instance['ref_label'] = esc_attr($new_instance['ref_label']);
 		
 		if($new_instance['donation_amount'] == '')
@@ -55,13 +65,26 @@ class WDF_Simple_Donation extends WP_Widget {
 		else
 			$instance['paypal_email'] = is_email($new_instance['paypal_email']);
 		
-		
-			
-		
 		return $instance;
 	}
 
 	function form( $instance ) {
+		if ( !is_array($instance) ) {
+			$instance = array();
+		}
+		$defaults = array(
+			'title' => '',
+			'description' => '',
+			'thankyou_msg' => '',
+			'style' => '',
+			'button_type' => 'default',
+			'button_text' => '',
+			'allow_note' => '',
+			'ref_label' => '',
+			'donation_amount' => '',
+			'paypal_email' => ''
+		);
+		$instance = wp_parse_args( (array)$instance, $defaults );
 		$settings = get_option('wdf_settings');
 		global $wdf;
 		?>
@@ -80,18 +103,20 @@ class WDF_Simple_Donation extends WP_Widget {
 			<label for="<?php echo $this->get_field_id( 'description' ); ?>"><?php _e('Beschreibung','wdf') ?></label>
 			<textarea id="<?php echo $this->get_field_id( 'description' ); ?>" class="widefat" name="<?php echo $this->get_field_name('description'); ?>"><?php if(isset($instance['description']))  echo esc_attr($instance['description']); ?></textarea>
 		</p>
-		
+		<p>
+			<label for="<?php echo $this->get_field_id( 'thankyou_msg' ); ?>"><?php _e('Danke-Nachricht (nach erfolgreicher Spende)','wdf'); ?></label>
+			<textarea id="<?php echo $this->get_field_id( 'thankyou_msg' ); ?>" class="widefat" name="<?php echo $this->get_field_name('thankyou_msg'); ?>"><?php if(isset($instance['thankyou_msg'])) echo esc_textarea($instance['thankyou_msg']); ?></textarea>
+		</p>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'donation_amount' ); ?>"><?php _e('Spendenbetrag (leer = Auswahl)','wdf') ?></label><br/>
-			<input id="<?php echo $this->get_field_id( 'donation_amount' ); ?>" type="text" name="<?php echo $this->get_field_name('donation_amount'); ?>" value="<?php if(isset($instance['donation_amount'])) echo ($instance['donation_amount'] == '' ? '' : $wdf->filter_price($instance['donation_amount'])); ?>" />
+			<input id="<?php echo $this->get_field_id( 'donation_amount' ); ?>" type="text" name="<?php echo $this->get_field_name('donation_amount'); ?>" value="<?php echo ($instance['donation_amount'] == '' ? '' : $wdf->filter_price($instance['donation_amount'])); ?>" />
 		</p>
 		
-		<?php if( isset($instance['button_type']) && $instance['button_type'] == 'custom') : ?>
 			<p>
 				<label for="<?php echo $this->get_field_id( 'style' ); ?>"><?php echo __('Wähle einen Anzeigestil','wdf'); ?></label>
 				<select id="<?php echo $this->get_field_id( 'style' ); ?>" name="<?php echo $this->get_field_name('style'); ?>">
 					<option <?php if(isset($instance['style'])) selected($instance['style'],'wdf_default'); ?> value="wdf_default"><?php _e('Basis','wdf'); ?></option>
-					<option <?php if(isset($instance['style'])) selected($instance['style'],'wdf_dark'); ?> value="wdf_dark"><?php _e('Dunkek','wdf'); ?></option>
+					<option <?php if(isset($instance['style'])) selected($instance['style'],'wdf_dark'); ?> value="wdf_dark"><?php _e('Dunkel','wdf'); ?></option>
 					<option <?php if(isset($instance['style'])) selected($instance['style'],'wdf_fresh'); ?> value="wdf_fresh"><?php _e('Frisch','wdf'); ?></option>
 					<option <?php if(isset($instance['style'])) selected($instance['style'],'wdf_note'); ?> value="wdf_note"><?php _e('Notiz','wdf'); ?></option>
 					<option <?php if(isset($instance['style'])) selected($instance['style'],'wdf_custom'); ?> value="custom"><?php _e('Keiner (benutzerdefiniertes CSS)','wdf'); ?></option>
@@ -101,17 +126,10 @@ class WDF_Simple_Donation extends WP_Widget {
 				<label for="<?php echo $this->get_field_id( 'button_text' ); ?>"><?php _e('Spende Button Text','wdf'); ?></label>
 				<input id="<?php echo $this->get_field_id( 'button_text' ); ?>" type="text" class="widefat" name="<?php echo $this->get_field_name('button_text'); ?>" value="<?php if(isset($instance['button_text'])) echo esc_attr($instance['button_text']); ?>" />
 			</p>
-		<?php endif; ?>
-		<?php if(isset($instance['button_type']) && $instance['button_type'] == 'default') : ?>
 			<p>
-				<label for="<?php echo $this->get_field_id( 'show_cc' ); ?>"><?php _e('Akzeptierte Kreditkarten anzeigen','wdf'); ?></label>
-				<input id="<?php echo $this->get_field_id( 'show_cc' ); ?>" type="checkbox" name="<?php echo $this->get_field_name('show_cc'); ?>" value="yes" <?php if(isset($instance['show_cc'])) checked($instance['show_cc'],'1'); ?> /><br/>
 				<label for="<?php echo $this->get_field_id( 'allow_note' ); ?>"><?php _e('Zusätzliches Notizfeld zulassen','wdf'); ?></label>
-				<input id="<?php echo $this->get_field_id( 'allow_note' ); ?>" type="checkbox" name="<?php echo $this->get_field_name('allow_note'); ?>" value="yes" <?php if(isset($instance['allow_note'])) checked($instance['allow_note'],'1'); ?> /><br/>
-				<label for="<?php echo $this->get_field_id( 'small_button' ); ?>"><?php _e('Verwendekleine Schaltfläche','wdf'); ?></label>
-				<input id="<?php echo $this->get_field_id( 'small_button' ); ?>" type="checkbox" name="<?php echo $this->get_field_name('small_button'); ?>" value="yes" <?php if(isset($instance['small_button'])) checked($instance['small_button'],'1'); ?> />
+				<input id="<?php echo $this->get_field_id( 'allow_note' ); ?>" type="checkbox" name="<?php echo $this->get_field_name('allow_note'); ?>" value="yes" <?php checked($instance['allow_note'],'yes'); ?> /><br/>
 			</p>
-		<?php endif; ?>
 		
 		<p>
 			<label for="<?php echo $this->get_field_id( 'ref_label' ); ?>"><?php _e('Referenzetikett (optionale Beschreibung)','wdf') ?></label><br />
